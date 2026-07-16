@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Garet";
-  src: url("/assets/fonts/garet/Garet-Book.woff2") format("woff2");
+  src: url("/assets/brand/fonts/garet/Garet-Book.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Garet";
-  src: url("/assets/fonts/garet/Garet-Medium.woff2") format("woff2");
+  src: url("/assets/brand/fonts/garet/Garet-Medium.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -16,8 +16,115 @@
 
 @font-face {
   font-family: "Garet";
-  src: url("/assets/fonts/garet/Garet-Bold.woff2") format("woff2");
+  src: url("/assets/brand/fonts/garet/Garet-Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
+}
+
+:root {
+  --font-weight-book: 400;
+}
+
+.type-hero-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(2.65rem, 5vw, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.type-section-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(2rem, 3.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.type-subsection-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.type-card-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.type-body-large {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-book);
+  font-size: clamp(1.0625rem, 1.4vw, 1.1875rem);
+  line-height: 1.72;
+  letter-spacing: -0.005em;
+}
+
+.type-body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-book);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.type-body-small {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-book);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.type-eyebrow {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  line-height: 1.3;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.type-navigation {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  text-transform: none;
+}
+
+.type-button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9375rem;
+  line-height: 1;
+  letter-spacing: 0.005em;
+  text-transform: none;
+}
+
+.type-footer-title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.type-caption {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-book);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
 }

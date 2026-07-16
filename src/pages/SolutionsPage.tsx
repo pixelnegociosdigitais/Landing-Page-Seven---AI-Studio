@@ -34,22 +34,22 @@ export default function SolutionsPage() {
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-xs text-[#16BDF0] font-bold tracking-[0.12em] uppercase max-w-max">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-[#16BDF0] type-eyebrow max-w-max">
                 <span>{siteContent.solutions.hero.tag}</span>
               </div>
               
-              <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-tight max-w-2xl">
+              <h1 className="text-white type-section-title max-w-2xl">
                 Soluções para <span className="text-[#16BDF0] text-transparent bg-clip-text bg-gradient-to-r from-[#16BDF0] to-[#095BFF]">transformar desafios</span> em resultados.
               </h1>
               
-              <p className="text-[#B6BEC8] text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+              <p className="text-[#B6BEC8] type-body-large max-w-xl">
                 {siteContent.solutions.hero.description}
               </p>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
                 <button
                   onClick={handleScrollToCards}
-                  className="px-6 py-3.5 text-center font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 rounded-xl shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all flex items-center justify-center gap-2 text-sm cursor-pointer"
+                  className="px-6 py-3.5 text-center type-button text-white bg-[#095BFF] hover:bg-[#095BFF]/95 rounded-xl shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Conhecer nossas soluções</span>
                   <ArrowRight className="w-4 h-4" />
@@ -59,7 +59,7 @@ export default function SolutionsPage() {
                   href={siteContent.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 text-center font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all text-sm flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 text-center type-button text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-[#25D366]" />
                   <span>{siteContent.solutions.hero.ctaSecondary}</span>
@@ -89,8 +89,8 @@ export default function SolutionsPage() {
                     <Search className="w-4 h-4" />
                   </motion.div>
                   <div>
-                    <h4 className="text-white text-sm font-bold transition-colors group-hover/item:text-[#16BDF0]">Diagnóstico</h4>
-                    <p className="text-[#B6BEC8] text-xs leading-relaxed font-medium">Investigamos a fundo seu cenário atual para clarear os gargalos.</p>
+                    <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#16BDF0]">Diagnóstico</h4>
+                    <p className="text-[#B6BEC8] type-body-small">Investigamos a fundo seu cenário atual para clarear os gargalos.</p>
                   </div>
                 </div>
 
@@ -104,8 +104,8 @@ export default function SolutionsPage() {
                     <Target className="w-4 h-4" />
                   </motion.div>
                   <div>
-                    <h4 className="text-white text-sm font-bold transition-colors group-hover/item:text-[#095BFF]">Estratégia</h4>
-                    <p className="text-[#B6BEC8] text-xs leading-relaxed font-medium">Desenvolvemos planos práticos orientados a propósitos reais.</p>
+                    <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#095BFF]">Estratégia</h4>
+                    <p className="text-[#B6BEC8] type-body-small">Desenvolvemos planos práticos orientados a propósitos reais.</p>
                   </div>
                 </div>
 
@@ -119,8 +119,8 @@ export default function SolutionsPage() {
                     <TrendingUp className="w-4 h-4" />
                   </motion.div>
                   <div>
-                    <h4 className="text-white text-sm font-bold transition-colors group-hover/item:text-[#25D366]">Acompanhamento</h4>
-                    <p className="text-[#B6BEC8] text-xs leading-relaxed font-medium">Garantimos suporte consultivo contínuo para sustentar a evolução.</p>
+                    <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#25D366]">Acompanhamento</h4>
+                    <p className="text-[#B6BEC8] type-body-small">Garantimos suporte consultivo contínuo para sustentar a evolução.</p>
                   </div>
                 </div>
 
@@ -134,8 +134,8 @@ export default function SolutionsPage() {
             ================================================== */}
         <AnimatedSection id="solutions-cards" className="py-16 border-b border-white/5 scroll-mt-24">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">CONHEÇA AS FRENTES</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mt-2">
+            <span className="text-[#16BDF0] type-eyebrow">CONHEÇA AS FRENTES</span>
+            <h2 className="text-white type-section-title mt-2">
               Nossas Linhas de Atuação
             </h2>
           </div>
@@ -162,14 +162,14 @@ export default function SolutionsPage() {
                 >
                   <GraduationCap className="w-7 h-7" />
                 </motion.div>
-                <h3 className="text-white font-bold text-xl mb-3">Educação</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-white type-card-title mb-3">Educação</h3>
+                <p className="text-[#B6BEC8] type-body mb-6">
                   Formações, projetos e materiais pedagógicos customizados para escolas e redes que desejam avançar com inclusão, propósito, conformidade legal e qualidade pedagógica comprovada.
                 </p>
               </div>
               <Link
                 to="/contato?solution=educacao"
-                className="text-xs font-bold text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
+                className="type-button text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
               >
                 <span>Ver detalhes</span>
                 <ChevronRight className="w-4.5 h-4.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -196,14 +196,14 @@ export default function SolutionsPage() {
                 >
                   <Briefcase className="w-7 h-7" />
                 </motion.div>
-                <h3 className="text-white font-bold text-xl mb-3">Empresas</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-white type-card-title mb-3">Empresas</h3>
+                <p className="text-[#B6BEC8] type-body mb-6">
                   Orientação pragmática, planejamento estratégico integrado e organization financeira e operacional para MEIs, micro e pequenas empresas pavimentarem crescimento com máxima segurança.
                 </p>
               </div>
               <Link
                 to="/contato?solution=empresas"
-                className="text-xs font-bold text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
+                className="type-button text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
               >
                 <span>Ver detalhes</span>
                 <ChevronRight className="w-4.5 h-4.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -230,14 +230,14 @@ export default function SolutionsPage() {
                 >
                   <Users className="w-7 h-7" />
                 </motion.div>
-                <h3 className="text-white font-bold text-xl mb-3">Formações</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-white type-card-title mb-3">Formações</h3>
+                <p className="text-[#B6BEC8] type-body mb-6">
                   Treinamentos dinâmicos e palestras corporativas focadas em soluções práticas para capacitação e aperfeiçoamento de educadores, gestores públicos ou privados, lideranças de equipe e colaboradores.
                 </p>
               </div>
               <Link
                 to="/contato?solution=formacoes"
-                className="text-xs font-bold text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
+                className="type-button text-[#16BDF0] hover:text-white inline-flex items-center gap-1.5 focus:outline-none transition-colors border-t border-[rgba(247,248,250,0.06)] pt-5 w-full mt-2"
               >
                 <span>Ver detalhes</span>
                 <ChevronRight className="w-4.5 h-4.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -252,8 +252,8 @@ export default function SolutionsPage() {
             ================================================== */}
         <AnimatedSection className="py-16 border-b border-white/5">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">MÉTODO COMPROVADO</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mt-2">
+            <span className="text-[#16BDF0] type-eyebrow">MÉTODO COMPROVADO</span>
+            <h2 className="text-white type-section-title mt-2">
               Como trabalhamos
             </h2>
           </div>
@@ -271,8 +271,8 @@ export default function SolutionsPage() {
                 >
                   {step.step}
                 </motion.div>
-                <h4 className="text-white font-bold text-base mb-1.5">{step.title}</h4>
-                <p className="text-[#7F8A98] text-sm leading-relaxed max-w-[220px] font-medium">
+                <h4 className="text-white type-card-title mb-1.5">{step.title}</h4>
+                <p className="text-[#7F8A98] type-body max-w-[220px]">
                   {step.description}
                 </p>
               </div>
@@ -288,18 +288,18 @@ export default function SolutionsPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#16BDF0]/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#095BFF]/10 blur-3xl rounded-full" />
 
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight mb-4 relative z-10">
+            <h2 className="text-white type-section-title mb-4 relative z-10">
               {siteContent.solutions.cta.title}
             </h2>
             
-            <p className="text-[#B6BEC8] text-sm sm:text-base mb-8 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
+            <p className="text-[#B6BEC8] type-body mb-8 max-w-xl mx-auto relative z-10">
               {siteContent.solutions.cta.description} Conte brevemente suas demandas e receberá um retorno personalizado.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <Link
                 to="/contato"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all flex items-center justify-center gap-2"
               >
                 <span>Agende seu diagnóstico</span>
                 <ArrowRight className="w-4 h-4" />
@@ -309,7 +309,7 @@ export default function SolutionsPage() {
                 href={siteContent.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 <span>Conversar no WhatsApp</span>

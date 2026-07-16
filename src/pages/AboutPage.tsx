@@ -28,15 +28,15 @@ export default function AboutPage() {
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-xs text-[#16BDF0] font-bold tracking-[0.12em] uppercase max-w-max">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-[#16BDF0] type-eyebrow max-w-max">
               <span>{siteContent.about.hero.tag}</span>
             </div>
             
-            <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-tight max-w-2xl">
+            <h1 className="text-white type-section-title max-w-2xl">
               Conhecimento que aproxima. Estratégia que <span className="text-[#16BDF0] text-transparent bg-clip-text bg-gradient-to-r from-[#16BDF0] to-[#095BFF]">transforma.</span>
             </h1>
             
-            <p className="text-[#B6BEC8] text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            <p className="text-[#B6BEC8] type-body-large max-w-xl">
               {siteContent.about.hero.description}
             </p>
           </div>
@@ -60,20 +60,20 @@ export default function AboutPage() {
           
           {/* Left Block: Nossa Essência */}
           <div className="lg:col-span-5 flex flex-col gap-4 text-left">
-            <h2 className="text-[#16BDF0] font-bold text-xs tracking-widest uppercase border-l-4 border-[#16BDF0] pl-3">
+            <h2 className="text-[#16BDF0] border-l-4 border-[#16BDF0] pl-3 type-eyebrow">
               {siteContent.about.essence.title}
             </h2>
-            <p className="text-white font-bold text-xl sm:text-2xl leading-relaxed tracking-tight">
+            <p className="text-white type-subsection-title">
               Ajudar pessoas, escolas e negócios a encontrarem direção clara.
             </p>
-            <p className="text-[#B6BEC8] text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-[#B6BEC8] type-body">
               {siteContent.about.essence.description} Acreditamos em diagnósticos transparentes, processos enxutos e cooperação sincera para desbloquear potencialidades locais.
             </p>
           </div>
 
           {/* Right Block: Nossos Pilares (4 Columns) */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-            <h2 className="text-[#16BDF0] font-bold text-xs tracking-widest uppercase border-l-4 border-[#16BDF0] pl-3">
+            <h2 className="text-[#16BDF0] border-l-4 border-[#16BDF0] pl-3 type-eyebrow">
               {siteContent.about.pilares.title}
             </h2>
             
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-full border border-[#16BDF0]/30 bg-[#07111F] flex items-center justify-center text-[#16BDF0] shadow-sm">
                   <ShieldAlert className="w-5 h-5" />
                 </div>
-                <h4 className="text-white font-bold text-sm leading-snug tracking-wide">
+                <h4 className="text-white type-card-title">
                   Educação antirracista e inclusiva
                 </h4>
               </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-full border border-[#095BFF]/30 bg-[#07111F] flex items-center justify-center text-[#095BFF] shadow-sm">
                   <Heart className="w-5 h-5" />
                 </div>
-                <h4 className="text-white font-bold text-sm leading-snug tracking-wide">
+                <h4 className="text-white type-card-title">
                   Desenvolvimento humano
                 </h4>
               </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-full border border-purple-500/30 bg-[#07111F] flex items-center justify-center text-purple-400 shadow-sm">
                   <Compass className="w-5 h-5" />
                 </div>
-                <h4 className="text-white font-bold text-sm leading-snug tracking-wide">
+                <h4 className="text-white type-card-title">
                   Estratégia com propósito
                 </h4>
               </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-full border border-emerald-500/30 bg-[#07111F] flex items-center justify-center text-emerald-400 shadow-sm">
                   <Fingerprint className="w-5 h-5" />
                 </div>
-                <h4 className="text-white font-bold text-sm leading-snug tracking-wide">
+                <h4 className="text-white type-card-title">
                   Ética e responsabilidade
                 </h4>
               </div>
@@ -129,8 +129,8 @@ export default function AboutPage() {
             ================================================== */}
         <AnimatedSection className="py-16 border-b border-white/5">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">MÉTODO DE PARCERIA</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mt-2">
+            <span className="text-[#16BDF0] type-eyebrow">MÉTODO DE PARCERIA</span>
+            <h2 className="text-white type-section-title mt-2">
               Nossa Forma de Atuar
             </h2>
           </div>
@@ -151,8 +151,8 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0] mb-5 transition-transform duration-300 group-hover:scale-105">
                 <Ear className="w-5 h-5" />
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">Escutamos</h3>
-              <p className="text-[#B6BEC8] text-sm leading-relaxed font-medium">
+              <h3 className="text-white type-card-title mb-3">Escutamos</h3>
+              <p className="text-[#B6BEC8] type-body">
                 {siteContent.about.howWeAct.cards[0].description} Entendemos cada particularidade, cultura local e dores administrativas antes de esboçar qualquer desenho de proposta técnica.
               </p>
             </motion.div>
@@ -171,8 +171,8 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-[#095BFF]/10 border border-[#095BFF]/20 flex items-center justify-center text-[#095BFF] mb-5 transition-transform duration-300 group-hover:scale-105">
                 <Hammer className="w-5 h-5" />
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">Construímos</h3>
-              <p className="text-[#B6BEC8] text-sm leading-relaxed font-medium">
+              <h3 className="text-white type-card-title mb-3">Construímos</h3>
+              <p className="text-[#B6BEC8] type-body">
                 {siteContent.about.howWeAct.cards[1].description} Rejeitamos receitas genéricas pré-formatadas. Moldamos caminhos pedagógicos ou corporativos adaptáveis que façam pleno sentido operacional.
               </p>
             </motion.div>
@@ -191,8 +191,8 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5 transition-transform duration-300 group-hover:scale-105">
                 <LineChart className="w-5 h-5" />
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">Acompanhamos</h3>
-              <p className="text-[#B6BEC8] text-sm leading-relaxed font-medium">
+              <h3 className="text-white type-card-title mb-3">Acompanhamos</h3>
+              <p className="text-[#B6BEC8] type-body">
                 {siteContent.about.howWeAct.cards[2].description} Permanecemos lado a lado para monitorar a aderência aos processos, qualificar as lideranças e apoiar nas correções necessárias.
               </p>
             </motion.div>
@@ -217,18 +217,18 @@ export default function AboutPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#16BDF0]/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#095BFF]/10 blur-3xl rounded-full" />
 
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight mb-4 relative z-10">
+            <h2 className="text-white type-section-title mb-4 relative z-10">
               {siteContent.about.cta.title}
             </h2>
             
-            <p className="text-[#B6BEC8] text-sm sm:text-base mb-8 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
+            <p className="text-[#B6BEC8] type-body mb-8 max-w-xl mx-auto relative z-10">
               {siteContent.about.cta.description} Comece a traçar o amanhã seguro e inovador de sua instituição hoje mesmo.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <Link
                 to="/contato"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all flex items-center justify-center gap-2"
               >
                 <span>Agende seu diagnóstico</span>
                 <ArrowRight className="w-4 h-4" />
@@ -238,7 +238,7 @@ export default function AboutPage() {
                 href={siteContent.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 <span>Conversar no WhatsApp</span>

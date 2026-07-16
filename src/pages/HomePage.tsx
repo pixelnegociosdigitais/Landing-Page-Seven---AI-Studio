@@ -10,7 +10,7 @@ import SEO from '../components/SEO';
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#050B16] pt-24 pb-12 overflow-hidden">
+    <div className="relative min-h-screen bg-[var(--background-primary)] pt-24 pb-12 overflow-hidden">
       <SEO 
         title="+Seven | Soluções Educacionais e Empresariais" 
         description="Potencialize sua instituição de ensino ou empresa com a consultoria estratégica da +Seven. Formações especializadas, gestão de excelência e soluções de alto impacto."
@@ -18,9 +18,9 @@ export default function HomePage() {
 
       
       {/* Dynamic Background Blur Accents */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#16BDF0]/5 blur-[140px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-[800px] left-10 w-[400px] h-[400px] bg-[#095BFF]/4 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[#16BDF0]/3 blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[var(--brand-cyan)]/3 blur-[140px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-[800px] left-10 w-[400px] h-[400px] bg-[var(--brand-navy)]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[var(--brand-cyan)]/2 blur-[130px] rounded-full pointer-events-none -z-10" />
 
       <div className="page-shell">
         
@@ -32,13 +32,13 @@ export default function HomePage() {
         {/* ==================================================
             2. TRÊS ÁREAS PRINCIPAIS (Below Hero)
             ================================================== */}
-        <AnimatedSection className="py-16 border-b border-white/5">
+        <AnimatedSection className="py-16 border-b border-[var(--border-subtle)]">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">ATUAÇÃO CONJUNTA</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mt-2">
+            <span className="type-eyebrow text-[var(--brand-cyan)]">ATUAÇÃO CONJUNTA</span>
+            <h2 className="text-[var(--text-primary)] type-section-title mt-2">
               Soluções integradas para demandas reais
             </h2>
-            <p className="text-[#B6BEC8] text-sm sm:text-base mt-2 font-medium">
+            <p className="text-[var(--text-secondary)] type-body-large mt-2">
               Conectamos escuta qualificada a processos metodológicos claros nas três frentes fundamentais da +Seven.
             </p>
           </div>
@@ -47,79 +47,64 @@ export default function HomePage() {
             
             {/* Educação */}
             <motion.div 
-              whileHover={{ 
-                scale: 1.025, 
-                y: -5,
-                borderColor: "rgba(22, 189, 240, 0.48)",
-                boxShadow: "0 24px 60px rgba(0, 0, 0, 0.45), 0 0 25px rgba(22, 189, 240, 0.2)"
-              }}
+              whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="glass-card p-6 flex flex-col justify-between group cursor-pointer"
+              className="bg-[var(--surface-primary)] border border-[var(--border-subtle)] p-6 rounded-xl flex flex-col justify-between group cursor-pointer transition-all duration-200 hover:border-[var(--border-accent)] hover:shadow-[var(--shadow-soft)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0] mb-5 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 rounded-xl bg-[var(--border-accent)]/10 border border-[var(--border-accent)]/20 flex items-center justify-center text-[var(--brand-cyan)] mb-5 transition-transform duration-300 group-hover:scale-105">
                   <GraduationCap className="w-6 h-6" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">Educação</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-[var(--text-primary)] type-card-title mb-2">Educação</h3>
+                <p className="text-[var(--text-secondary)] type-body mb-6">
                   Formações, projetos pedagógicos e materiais didáticos para escolas que pretendem evoluir com excelência, propósito e inclusão verdadeira.
                 </p>
               </div>
-              <Link to="/solucoes" className="text-xs font-bold text-[#16BDF0] hover:text-[#16BDF0]/90 inline-flex items-center gap-1.5 focus:outline-none">
+              <Link to="/solucoes" className="type-button text-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]/90 inline-flex items-center gap-1.5 focus:outline-none">
                 <span>Ver detalhes</span>
-                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 text-[var(--brand-cyan)]" />
               </Link>
             </motion.div>
 
             {/* Empresas */}
             <motion.div 
-              whileHover={{ 
-                scale: 1.025, 
-                y: -5,
-                borderColor: "rgba(9, 91, 255, 0.48)",
-                boxShadow: "0 24px 60px rgba(0, 0, 0, 0.45), 0 0 25px rgba(9, 91, 255, 0.2)"
-              }}
+              whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="glass-card p-6 flex flex-col justify-between group cursor-pointer"
+              className="bg-[var(--surface-primary)] border border-[var(--border-subtle)] p-6 rounded-xl flex flex-col justify-between group cursor-pointer transition-all duration-200 hover:border-[var(--border-accent)] hover:shadow-[var(--shadow-soft)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#095BFF]/10 border border-[#095BFF]/20 flex items-center justify-center text-[#095BFF] mb-5 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 rounded-xl bg-[var(--border-accent)]/10 border border-[var(--border-accent)]/20 flex items-center justify-center text-[var(--brand-cyan)] mb-5 transition-transform duration-300 group-hover:scale-105">
                   <Briefcase className="w-6 h-6" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">Empresas</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-[var(--text-primary)] type-card-title mb-2">Empresas</h3>
+                <p className="text-[var(--text-secondary)] type-body mb-6">
                   Organização estratégica, planejamento e acompanhamento personalizado para MEIs, micro e pequenas empresas pavimentarem um amanhã seguro.
                 </p>
               </div>
-              <Link to="/solucoes" className="text-xs font-bold text-[#16BDF0] hover:text-[#16BDF0]/90 inline-flex items-center gap-1.5 focus:outline-none">
+              <Link to="/solucoes" className="type-button text-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]/90 inline-flex items-center gap-1.5 focus:outline-none">
                 <span>Ver detalhes</span>
-                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 text-[var(--brand-cyan)]" />
               </Link>
             </motion.div>
 
             {/* Formações */}
             <motion.div 
-              whileHover={{ 
-                scale: 1.025, 
-                y: -5,
-                borderColor: "rgba(168, 85, 247, 0.48)",
-                boxShadow: "0 24px 60px rgba(0, 0, 0, 0.45), 0 0 25px rgba(168, 85, 247, 0.2)"
-              }}
+              whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="glass-card p-6 flex flex-col justify-between group cursor-pointer"
+              className="bg-[var(--surface-primary)] border border-[var(--border-subtle)] p-6 rounded-xl flex flex-col justify-between group cursor-pointer transition-all duration-200 hover:border-[var(--border-accent)] hover:shadow-[var(--shadow-soft)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-12 h-12 rounded-xl bg-[var(--border-accent)]/10 border border-[var(--border-accent)]/20 flex items-center justify-center text-[var(--brand-cyan)] mb-5 transition-transform duration-300 group-hover:scale-105">
                   <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">Formações</h3>
-                <p className="text-[#B6BEC8] text-sm leading-relaxed mb-6 font-medium">
+                <h3 className="text-[var(--text-primary)] type-card-title mb-2">Formações</h3>
+                <p className="text-[var(--text-secondary)] type-body mb-6">
                   Treinamentos práticos altamente direcionados para o avanço de educadores, gestores, lideranças corporativas e equipes de alta performance.
                 </p>
               </div>
-              <Link to="/solucoes" className="text-xs font-bold text-[#16BDF0] hover:text-[#16BDF0]/90 inline-flex items-center gap-1.5 focus:outline-none">
+              <Link to="/solucoes" className="type-button text-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]/90 inline-flex items-center gap-1.5 focus:outline-none">
                 <span>Ver detalhes</span>
-                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 text-[var(--brand-cyan)]" />
               </Link>
             </motion.div>
 
@@ -129,10 +114,10 @@ export default function HomePage() {
         {/* ==================================================
             3. MÉTODO +SEVEN (Timeline)
             ================================================== */}
-        <AnimatedSection className="py-16 border-b border-white/5">
+        <AnimatedSection className="py-16 border-b border-[var(--border-subtle)]">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">COMO TRABALHAMOS</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mt-2">
+            <span className="type-eyebrow text-[var(--brand-cyan)]">COMO TRABALHAMOS</span>
+            <h2 className="text-[var(--text-primary)] type-section-title mt-2">
               Processo claro focado na sua realidade
             </h2>
           </div>
@@ -140,48 +125,48 @@ export default function HomePage() {
           {/* Timeline Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Timeline horizontal background path line in desktop */}
-            <div className="hidden lg:block absolute top-[44px] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-[#16BDF0]/20 via-[#095BFF]/30 to-[#16BDF0]/20 -z-10" />
+            <div className="hidden lg:block absolute top-[44px] left-[15%] right-[15%] h-[2px] bg-[var(--border-medium)] -z-10" />
 
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center p-4">
-              <div className="w-14 h-14 rounded-full bg-[#07111F] border-2 border-[#16BDF0] flex items-center justify-center text-[#16BDF0] font-bold text-lg shadow-lg shadow-[#16BDF0]/10 mb-4 z-10">
+              <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                 1
               </div>
-              <h4 className="text-white font-bold text-base mb-1.5">Entender</h4>
-              <p className="text-[#7F8A98] text-sm leading-relaxed max-w-[200px] font-medium">
+              <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Entender</h4>
+              <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                 Escutamos com empatia sua realidade e mapeamos os desafios.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center p-4">
-              <div className="w-14 h-14 rounded-full bg-[#07111F] border-2 border-[#095BFF] flex items-center justify-center text-[#095BFF] font-bold text-lg shadow-lg shadow-[#095BFF]/10 mb-4 z-10">
+              <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                 2
               </div>
-              <h4 className="text-white font-bold text-base mb-1.5">Planejar</h4>
-              <p className="text-[#7F8A98] text-sm leading-relaxed max-w-[200px] font-medium">
+              <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Planejar</h4>
+              <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                 Criamos planos e estratégias totalmente personalizadas.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center p-4">
-              <div className="w-14 h-14 rounded-full bg-[#07111F] border-2 border-purple-500 flex items-center justify-center text-purple-400 font-bold text-lg shadow-lg shadow-purple-500/10 mb-4 z-10">
+              <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                 3
               </div>
-              <h4 className="text-white font-bold text-base mb-1.5">Aplicar</h4>
-              <p className="text-[#7F8A98] text-sm leading-relaxed max-w-[200px] font-medium">
+              <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Aplicar</h4>
+              <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                 Executamos o plano com ferramentas práticas no dia a dia.
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="flex flex-col items-center text-center p-4">
-              <div className="w-14 h-14 rounded-full bg-[#07111F] border-2 border-[#16BDF0] flex items-center justify-center text-[#16BDF0] font-bold text-lg shadow-lg shadow-[#16BDF0]/10 mb-4 z-10">
+              <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                 4
               </div>
-              <h4 className="text-white font-bold text-base mb-1.5">Acompanhar</h4>
-              <p className="text-[#7F8A98] text-sm leading-relaxed max-w-[200px] font-medium">
+              <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Acompanhar</h4>
+              <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                 Analisamos métricas, celebramos resultados e propomos ajustes.
               </p>
             </div>
@@ -192,7 +177,7 @@ export default function HomePage() {
         {/* ==================================================
             4. SEÇÃO EDUCAÇÃO ANTIRRACISTA (High contrast split layout)
             ================================================== */}
-        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16 border-b border-white/5">
+        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16 border-b border-[var(--border-subtle)] bg-[var(--background-primary)]">
           {/* Left portrait photo - smoothly masked */}
           <div className="lg:col-span-5 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden photo-mask shadow-xl">
             <img
@@ -200,22 +185,22 @@ export default function HomePage() {
               alt="Aluno negro lendo livro atentamente em sala de aula"
               className="w-full h-full object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-[#050B16]/20" />
+            <div className="absolute inset-0 bg-[var(--background-deep)]/20" />
           </div>
 
           {/* Right text box */}
           <div className="lg:col-span-7 flex flex-col gap-5 text-left">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">EDUCAÇÃO ESPECIALIZADA</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight max-w-xl">
+            <span className="type-eyebrow text-[var(--brand-cyan)]">EDUCAÇÃO ESPECIALIZADA</span>
+            <h2 className="text-white type-section-title max-w-xl">
               {siteContent.home.educationSection.title}
             </h2>
-            <p className="text-[#B6BEC8] text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+            <p className="text-[var(--brand-gray)] type-body max-w-xl">
               {siteContent.home.educationSection.description} Auxiliamos coordenações pedagógicas, docentes e instituições de ensino a estruturarem planejamentos curriculares e debates enriquecedores fundamentados na responsabilidade e conformidade legal.
             </p>
             <div className="mt-2">
               <Link
                 to="/solucoes"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-[#16BDF0] bg-[#16BDF0]/10 border border-[#16BDF0]/25 hover:bg-[#16BDF0]/20 transition-all focus:outline-none"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg type-button text-[var(--brand-cyan)] bg-[var(--border-accent)]/10 border border-[var(--border-accent)]/25 hover:bg-[var(--border-accent)]/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
               >
                 <span>Conhecer materiais antirracistas</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -227,24 +212,24 @@ export default function HomePage() {
         {/* ==================================================
             5. SEÇÃO EMPRESARIAL
             ================================================== */}
-        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16 border-b border-white/5">
+        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16 border-b border-[var(--border-subtle)] bg-[var(--background-secondary)]">
           
           {/* Left Text */}
           <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col gap-5 text-left">
-            <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase">GESTÃO E EMPRESAS</span>
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight max-w-xl">
+            <span className="type-eyebrow text-[var(--brand-cyan)]">GESTÃO E EMPRESAS</span>
+            <h2 className="text-[var(--text-primary)] type-section-title max-w-xl">
               {siteContent.home.businessSection.title}
             </h2>
-            <p className="text-[#B6BEC8] text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+            <p className="text-[var(--text-secondary)] type-body max-w-xl">
               {siteContent.home.businessSection.description} Desenvolvemos planos de ação estratégicos práticos para guiar o dia a dia administrativo, finanças primárias, posicionamento de mercado e formação continuada para equipes e lideranças em MEIs e pequenas empresas.
             </p>
             <div className="mt-2">
               <Link
                 to="/contato"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all focus:outline-none"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg type-button text-[var(--text-primary)] bg-white/5 hover:bg-white/10 border border-[var(--border-subtle)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
               >
                 <span>Agendar diagnóstico para minha empresa</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#16BDF0]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[var(--brand-cyan)]" />
               </Link>
             </div>
           </div>
@@ -256,7 +241,7 @@ export default function HomePage() {
               alt="Profissional negra de negócios sorrindo confiante"
               className="w-full h-full object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-[#050B16]/20" />
+            <div className="absolute inset-0 bg-[var(--background-deep)]/20" />
           </div>
 
         </AnimatedSection>
@@ -279,23 +264,26 @@ export default function HomePage() {
             6. CTA FINAL SECTION
             ================================================== */}
         <AnimatedSection className="py-16">
-          <div className="glass-panel-strong p-8 sm:p-12 text-center max-w-3xl mx-auto relative overflow-hidden border-[#16BDF0]/20">
-            {/* Ambient light ring decorator inside */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#16BDF0]/10 blur-3xl rounded-full" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#095BFF]/10 blur-3xl rounded-full" />
+          <div 
+            className="p-8 sm:p-12 text-center max-w-3xl mx-auto relative overflow-hidden border border-[var(--border-subtle)] rounded-2xl shadow-[var(--shadow-soft)] bg-[var(--brand-navy)]"
+            style={{ background: 'linear-gradient(135deg, var(--brand-navy) 0%, var(--background-deep) 100%)' }}
+          >
+            {/* Subtle ciano accent detail */}
+            <div className="absolute -top-12 -right-12 w-24 h-24 bg-[var(--brand-cyan)]/10 blur-2xl rounded-full" />
 
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight mb-4 relative z-10">
+            <h2 className="text-white type-section-title mb-4 relative z-10">
               {siteContent.home.ctaFinal.title}
             </h2>
             
-            <p className="text-[#B6BEC8] text-sm sm:text-base mb-8 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
+            <p className="text-[var(--text-secondary)] type-body mb-8 max-w-xl mx-auto relative z-10">
               Descubra caminhos consistentes com o apoio strategic da +Seven. Estamos prontos para entender seu momento e construir soluções personalizadas.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <Link
                 to="/contato"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-white shadow-md hover:-translate-y-[2px] transition-all duration-[180ms] flex items-center justify-center gap-2"
+                style={{ background: 'var(--gradient-primary)' }}
               >
                 <span>Agendar atendimento</span>
                 <ArrowRight className="w-4 h-4" />
@@ -305,7 +293,7 @@ export default function HomePage() {
                 href={siteContent.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-[var(--text-primary)] bg-[var(--background-deep)] hover:bg-[var(--background-deep)]/80 border border-[var(--border-subtle)] transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 <span>Conversar no WhatsApp</span>

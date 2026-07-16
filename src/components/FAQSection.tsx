@@ -45,23 +45,23 @@ export default function FAQSection() {
         
         {/* Left Column: Heading and Info */}
         <div className="lg:col-span-5 flex flex-col gap-5 text-left lg:sticky lg:top-28">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--border-accent)] border border-[var(--border-accent)] text-xs text-[var(--brand-cyan)] font-bold tracking-[0.12em] uppercase max-w-max">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--border-accent)] border border-[var(--border-accent)] type-eyebrow text-[var(--brand-cyan)] max-w-max">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>FAQ • DÚVIDAS FREQUENTES</span>
           </div>
           
-          <h2 className="text-[var(--text-primary)] font-bold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
+          <h2 className="text-[var(--text-primary)] type-section-title">
             Perguntas comuns sobre nossos <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-navy)] to-[var(--brand-cyan)]">serviços e método.</span>
           </h2>
           
-          <p className="text-[var(--text-secondary)] text-sm sm:text-base leading-relaxed font-medium">
+          <p className="text-[var(--text-secondary)] type-body">
             Entenda como funciona nossa consultoria estratégica, como apoiamos escolas e pequenas empresas no dia a dia e como agendar seu diagnóstico inicial sem burocracia.
           </p>
 
           <div className="mt-2">
             <Link
               to="/contato"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-[var(--text-primary)] bg-white/5 hover:bg-white/10 border border-[var(--border-subtle)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg type-button text-[var(--text-primary)] bg-white/5 hover:bg-white/10 border border-[var(--border-subtle)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
             >
               <span>Fazer outra pergunta</span>
               <ArrowRight className="w-3.5 h-3.5 text-[var(--brand-cyan)]" />
@@ -88,7 +88,7 @@ export default function FAQSection() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-item-answer-${index}`}
                 >
-                  <span className="text-[var(--text-primary)] font-bold text-sm sm:text-base leading-snug tracking-wide transition-colors group-hover:text-[var(--brand-cyan)]">
+                  <span className="text-[var(--text-primary)] font-bold text-sm sm:text-base leading-snug transition-colors group-hover:text-[var(--brand-cyan)]">
                     {item.question}
                   </span>
                   <span className="shrink-0 text-[var(--brand-cyan)]">
@@ -115,7 +115,7 @@ export default function FAQSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                      <div className="px-5 pb-5 pt-2 text-[var(--text-secondary)] text-sm leading-relaxed font-medium text-left border-t border-[var(--border-subtle)]">
+                      <div className="px-5 pb-5 pt-2 text-[var(--text-secondary)] type-body-small text-left border-t border-[var(--border-subtle)]">
                         {item.answer}
                       </div>
                     </motion.div>

@@ -95,7 +95,7 @@ export default function Header() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative py-2 text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-[var(--text-primary)] focus:outline-none focus:text-[var(--text-primary)] ${
+                  `relative py-2 type-navigation transition-colors duration-200 hover:text-[var(--text-primary)] focus:outline-none focus:text-[var(--text-primary)] ${
                     isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'
                   }`
                 }
@@ -116,7 +116,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               to="/contato"
-              className="relative overflow-hidden group px-5 py-2.5 rounded-lg text-sm font-bold text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] active:scale-98 flex items-center gap-2 shadow-md shadow-black/20 hover:shadow-lg"
+              className="relative overflow-hidden group px-5 py-2.5 rounded-lg type-button text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] active:scale-98 flex items-center gap-2 shadow-md shadow-black/20 hover:shadow-lg"
               style={{ background: 'var(--gradient-primary)' }}
             >
               <span>Agende seu diagnóstico</span>
@@ -152,7 +152,7 @@ export default function Header() {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `text-2xl font-bold tracking-wide transition-all py-2 focus:outline-none focus:text-[var(--brand-cyan)] ${
+                `type-navigation transition-all py-2 focus:outline-none focus:text-[var(--brand-cyan)] ${
                   isActive ? 'text-[var(--text-primary)] border-b-2 border-[var(--brand-cyan)]' : 'text-[var(--text-secondary)] border-b border-[var(--border-subtle)] hover:text-[var(--text-primary)]'
                 }`
               }
@@ -166,7 +166,7 @@ export default function Header() {
         <div className="flex flex-col gap-4">
           <Link
             to="/contato"
-            className="w-full py-4 rounded-xl text-center font-bold text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] flex items-center justify-center gap-2 shadow-md shadow-black/20"
+            className="w-full py-4 rounded-xl text-center type-button text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] flex items-center justify-center gap-2 shadow-md shadow-black/20"
             style={{ background: 'var(--gradient-primary)' }}
           >
             <span>Agende seu diagnóstico</span>

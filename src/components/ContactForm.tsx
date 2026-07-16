@@ -127,7 +127,7 @@ export default function ContactForm() {
         {/* Name and WhatsApp fields side-by-side */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="name" className="text-xs text-[#B6BEC8] font-bold tracking-wider uppercase">
+            <label htmlFor="name" className="text-[#B6BEC8] type-eyebrow">
               Nome completo
             </label>
             <input
@@ -137,7 +137,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Digite seu nome"
-              className={`px-4 py-3 text-sm glass-input w-full ${errors.name ? 'border-red-500/55' : ''}`}
+              className={`px-4 py-3 text-sm glass-input w-full font-normal ${errors.name ? 'border-red-500/55' : ''}`}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
             />
@@ -149,7 +149,7 @@ export default function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="whatsapp" className="text-xs text-[#B6BEC8] font-bold tracking-wider uppercase">
+            <label htmlFor="whatsapp" className="text-[#B6BEC8] type-eyebrow">
               WhatsApp
             </label>
             <input
@@ -159,7 +159,7 @@ export default function ContactForm() {
               value={formData.whatsapp}
               onChange={handleInputChange}
               placeholder="(00) 00000-0000"
-              className={`px-4 py-3 text-sm glass-input w-full ${errors.whatsapp ? 'border-red-500/55' : ''}`}
+              className={`px-4 py-3 text-sm glass-input w-full font-normal ${errors.whatsapp ? 'border-red-500/55' : ''}`}
               aria-invalid={!!errors.whatsapp}
               aria-describedby={errors.whatsapp ? "whatsapp-error" : undefined}
             />
@@ -174,7 +174,7 @@ export default function ContactForm() {
         {/* Email and Profile dropdown side-by-side */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="email" className="text-xs text-[#B6BEC8] font-bold tracking-wider uppercase">
+            <label htmlFor="email" className="text-[#B6BEC8] type-eyebrow">
               E-mail
             </label>
             <input
@@ -184,7 +184,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="exemplo@email.com"
-              className={`px-4 py-3 text-sm glass-input w-full ${errors.email ? 'border-red-500/55' : ''}`}
+              className={`px-4 py-3 text-sm glass-input w-full font-normal ${errors.email ? 'border-red-500/55' : ''}`}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
@@ -196,7 +196,7 @@ export default function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-1.5 relative">
-            <label htmlFor="profile" className="text-xs text-[#B6BEC8] font-bold tracking-wider uppercase">
+            <label htmlFor="profile" className="text-[#B6BEC8] type-eyebrow">
               Perfil
             </label>
             <select
@@ -204,7 +204,7 @@ export default function ContactForm() {
               name="profile"
               value={formData.profile}
               onChange={handleInputChange}
-              className={`px-4 py-3 text-sm glass-input w-full appearance-none pr-10 ${errors.profile ? 'border-red-500/55' : ''}`}
+              className={`px-4 py-3 text-sm glass-input w-full appearance-none pr-10 font-normal ${errors.profile ? 'border-red-500/55' : ''}`}
               aria-invalid={!!errors.profile}
               aria-describedby={errors.profile ? "profile-error" : undefined}
             >
@@ -231,7 +231,7 @@ export default function ContactForm() {
 
         {/* Message area */}
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="message" className="text-xs text-[#B6BEC8] font-bold tracking-wider uppercase">
+          <label htmlFor="message" className="text-[#B6BEC8] type-eyebrow">
             Como podemos ajudar?
           </label>
           <textarea
@@ -241,7 +241,7 @@ export default function ContactForm() {
             onChange={handleInputChange}
             placeholder="Conte brevemente o que sua escola, instituição ou empresa precisa..."
             rows={4}
-            className={`px-4 py-3 text-sm glass-input w-full resize-none ${errors.message ? 'border-red-500/55' : ''}`}
+            className={`px-4 py-3 text-sm glass-input w-full resize-none font-normal ${errors.message ? 'border-red-500/55' : ''}`}
             aria-invalid={!!errors.message}
             aria-describedby={errors.message ? "message-error" : undefined}
           />
@@ -276,7 +276,7 @@ export default function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="mt-2 w-full py-3.5 bg-[#095BFF] hover:bg-[#095BFF]/95 text-white font-bold text-sm tracking-wider uppercase rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all"
+          className="mt-2 w-full py-3.5 bg-[#095BFF] hover:bg-[#095BFF]/95 text-white type-button rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all"
         >
           <span>Enviar mensagem</span>
           <Send className="w-4 h-4" />
@@ -306,19 +306,19 @@ export default function ContactForm() {
             
             <div className="flex items-center gap-3 text-[#16BDF0] mb-4">
               <CheckCircle2 className="w-8 h-8 shrink-0 text-[#25D366]" />
-              <h4 className="text-white font-bold text-lg sm:text-xl">
+              <h4 className="text-white type-card-title">
                 Mensagem validada com sucesso!
               </h4>
             </div>
 
-            <p className="text-sm text-[#B6BEC8] leading-relaxed mb-6">
+            <p className="text-[#B6BEC8] type-body-small mb-6">
               Para um atendimento imediato e direto, você pode encaminhar esses dados automaticamente para o nosso **WhatsApp de atendimento** ou prosseguir com a cópia.
             </p>
 
             <div className="flex flex-col gap-3">
               <button
                 onClick={handleSendToWhatsApp}
-                className="w-full py-3 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold rounded-xl flex items-center justify-center gap-2.5 transition-all"
+                className="w-full py-3 bg-[#25D366] hover:bg-[#25D366]/90 text-white type-button rounded-xl flex items-center justify-center gap-2.5 transition-all"
               >
                 <MessageSquare className="w-5 h-5" />
                 <span>Enviar pelo WhatsApp</span>
@@ -332,14 +332,14 @@ export default function ContactForm() {
                   alert('Dados copiados para a área de transferência!');
                   setIsSuccessModalOpen(false);
                 }}
-                className="w-full py-3 bg-white/5 hover:bg-white/10 text-[#B6BEC8] hover:text-white font-semibold rounded-xl border border-white/10 transition-all text-sm"
+                className="w-full py-3 bg-white/5 hover:bg-white/10 text-[#B6BEC8] hover:text-white type-button rounded-xl border border-white/10 transition-all"
               >
                 Apenas copiar dados do formulário
               </button>
 
               <button
                 onClick={() => setIsSuccessModalOpen(false)}
-                className="w-full py-2.5 text-[#7F8A98] hover:text-white transition-all text-xs font-medium"
+                className="w-full py-2.5 text-[#7F8A98] hover:text-white transition-all type-caption"
               >
                 Fechar janela
               </button>

@@ -68,29 +68,29 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="md:col-span-3 flex flex-col gap-4">
-            <h4 className="text-[var(--text-primary)] font-bold text-sm uppercase tracking-wider">Navegação</h4>
+            <h4 className="text-[var(--text-primary)] type-footer-title">Navegação</h4>
             <ul className="flex flex-col gap-2.5">
               <li>
-                <Link to="/" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Início</Link>
+                <Link to="/" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Início</Link>
               </li>
               <li>
-                <Link to="/solucoes" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Soluções</Link>
+                <Link to="/solucoes" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Soluções</Link>
               </li>
               <li>
-                <Link to="/sobre" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Sobre Nós</Link>
+                <Link to="/sobre" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Sobre Nós</Link>
               </li>
               <li>
-                <Link to="/conteudos" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Conteúdos</Link>
+                <Link to="/conteudos" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Conteúdos</Link>
               </li>
               <li>
-                <Link to="/contato" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Contato</Link>
+                <Link to="/contato" className="text-[var(--text-secondary)] hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]">Contato</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3: Contact details & quick action */}
           <div className="md:col-span-4 flex flex-col gap-4">
-            <h4 className="text-[var(--text-primary)] font-bold text-sm uppercase tracking-wider">Contato Oficial</h4>
+            <h4 className="text-[var(--text-primary)] type-footer-title">Contato Oficial</h4>
             <ul className="flex flex-col gap-3">
               <li className="flex items-center gap-3 group">
                 <Phone className="w-4 h-4 text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] transition-colors" />
@@ -98,7 +98,7 @@ export default function Footer() {
                   href={siteContent.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
+                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
                 >
                   {siteContent.contact.whatsappDisplay}
                 </a>
@@ -107,7 +107,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] transition-colors" />
                 <a
                   href={`mailto:${siteContent.contact.email}`}
-                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
+                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
                 >
                   {siteContent.contact.email}
                 </a>
@@ -118,7 +118,7 @@ export default function Footer() {
                   href={siteContent.contact.instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] text-sm font-medium transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
+                  className="text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] type-body-small transition-colors focus:outline-none focus:text-[var(--brand-cyan)]"
                 >
                   {siteContent.contact.instagram}
                 </a>
@@ -127,7 +127,7 @@ export default function Footer() {
             <div className="mt-2">
               <Link
                 to="/contato"
-                className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-primary)] bg-white/5 hover:bg-white/10 border border-[var(--border-subtle)] rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] group"
+                className="inline-flex items-center gap-2 type-button text-[var(--text-primary)] bg-white/5 hover:bg-white/10 border border-[var(--border-subtle)] rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] group"
               >
                 <Calendar className="w-3.5 h-3.5 text-[var(--text-secondary)] group-hover:text-[var(--brand-cyan)] transition-colors" />
                 <span>Agendar Atendimento</span>
@@ -138,13 +138,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs text-[var(--text-muted)]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 type-caption text-[var(--text-muted)]">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-            <span className="font-medium">{siteContent.brand.copyright}</span>
+            <span>{siteContent.brand.copyright}</span>
             <span className="hidden md:inline text-white/10">|</span>
             <Link
               to="/politica-de-privacidade"
-              className="hover:text-[var(--brand-cyan)] font-medium transition-colors focus:outline-none underline decoration-transparent hover:decoration-current underline-offset-2"
+              className="hover:text-[var(--brand-cyan)] transition-colors focus:outline-none underline decoration-transparent hover:decoration-current underline-offset-2"
             >
               Política de Privacidade
             </Link>
@@ -152,7 +152,7 @@ export default function Footer() {
           
           <button
             onClick={handleScrollToTop}
-            className="group flex items-center gap-2 font-semibold hover:text-[var(--brand-cyan)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg px-2 py-1"
+            className="group flex items-center gap-2 type-button hover:text-[var(--brand-cyan)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg px-2 py-1"
             aria-label="Voltar para o topo"
           >
             <span>Voltar ao topo</span>

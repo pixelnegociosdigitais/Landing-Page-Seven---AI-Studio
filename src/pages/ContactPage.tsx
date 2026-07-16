@@ -35,15 +35,15 @@ export default function ContactPage() {
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-xs text-[#16BDF0] font-bold tracking-[0.12em] uppercase max-w-max">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16BDF0]/10 border border-[#16BDF0]/20 text-[#16BDF0] type-eyebrow max-w-max">
               <span>{siteContent.contactPage.hero.tag}</span>
             </div>
             
-            <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-tight max-w-2xl">
+            <h1 className="text-white type-section-title max-w-2xl">
               Vamos conversar sobre o <span className="text-[#16BDF0] text-transparent bg-clip-text bg-gradient-to-r from-[#16BDF0] to-[#095BFF]">próximo passo?</span>
             </h1>
             
-            <p className="text-[#B6BEC8] text-base sm:text-lg leading-relaxed max-w-xl font-medium">
+            <p className="text-[#B6BEC8] type-body-large max-w-xl">
               {siteContent.contactPage.hero.description}
             </p>
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 href={siteContent.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 text-center font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 rounded-xl shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all flex items-center justify-center gap-2 text-sm"
+                className="px-6 py-3.5 text-center type-button text-white bg-[#095BFF] hover:bg-[#095BFF]/95 rounded-xl shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 <span>Falar no WhatsApp</span>
@@ -60,7 +60,7 @@ export default function ContactPage() {
               
               <button
                 onClick={handleScrollToForm}
-                className="px-6 py-3.5 text-center font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all text-sm cursor-pointer"
+                className="px-6 py-3.5 text-center type-button text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all cursor-pointer"
               >
                 Outros canais
               </button>
@@ -88,7 +88,7 @@ export default function ContactPage() {
             
             {/* Column 1: Contact Channels (lg:col-span-3) */}
             <div className="lg:col-span-3 flex flex-col gap-6 text-left">
-              <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase block border-l-4 border-[#16BDF0] pl-3">
+              <span className="text-[#16BDF0] type-eyebrow block border-l-4 border-[#16BDF0] pl-3">
                 Canais de contato
               </span>
               
@@ -112,18 +112,16 @@ export default function ContactPage() {
                     <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center text-[#25D366]">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <span className="text-white font-bold text-sm tracking-wide">WhatsApp</span>
+                    <span className="text-white type-card-title">WhatsApp</span>
                   </div>
-                  <p className="text-[#B6BEC8] text-xs leading-relaxed font-semibold">
+                  <p className="text-[#B6BEC8] type-body-small">
                     Para dúvidas rápidas, informações curriculares e agendamento de diagnósticos.
                   </p>
-                  <span className="text-[11px] text-[#16BDF0] font-bold block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
+                  <span className="text-[#16BDF0] type-caption block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
                     {siteContent.contact.whatsappDisplay}
                   </span>
                 </motion.a>
-
-                {/* E-mail Channel */}
-                <motion.a
+                 <motion.a
                   whileHover={{ 
                     scale: 1.025, 
                     y: -4,
@@ -138,18 +136,18 @@ export default function ContactPage() {
                     <div className="w-10 h-10 rounded-lg bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0]">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <span className="text-white font-bold text-sm tracking-wide">E-mail</span>
+                    <span className="text-white type-card-title">E-mail</span>
                   </div>
-                  <p className="text-[#B6BEC8] text-xs leading-relaxed font-semibold">
+                  <p className="text-[#B6BEC8] type-body-small">
                     Para propostas comerciais, projetos institucionais, parcerias e envio de materiais.
                   </p>
-                  <span className="text-[11px] text-[#16BDF0] font-bold block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
+                  <span className="text-[#16BDF0] type-caption block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
                     {siteContent.contact.email}
                   </span>
                 </motion.a>
 
-                {/* Instagram Channel */}
-                <motion.a
+                 {/* Instagram Channel */}
+                 <motion.a
                   whileHover={{ 
                     scale: 1.025, 
                     y: -4,
@@ -166,22 +164,22 @@ export default function ContactPage() {
                     <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                       <Instagram className="w-5 h-5" />
                     </div>
-                    <span className="text-white font-bold text-sm tracking-wide">Instagram</span>
+                    <span className="text-white type-card-title">Instagram</span>
                   </div>
-                  <p className="text-[#B6BEC8] text-xs leading-relaxed font-semibold">
+                  <p className="text-[#B6BEC8] type-body-small">
                     Para acompanhar novidades pedagógicas, vídeos educativos e conselhos estratégicos.
                   </p>
-                  <span className="text-[11px] text-[#16BDF0] font-bold block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
+                  <span className="text-[#16BDF0] type-caption block mt-3 underline decoration-transparent group-hover:decoration-current transition-all">
                     {siteContent.contact.instagram}
                   </span>
                 </motion.a>
 
-              </div>
+               </div>
             </div>
 
             {/* Column 2: Message Form (lg:col-span-5) */}
             <div className="lg:col-span-5 flex flex-col gap-6 text-left">
-              <span className="text-xs text-[#16BDF0] font-bold tracking-widest uppercase block border-l-4 border-[#16BDF0] pl-3">
+              <span className="text-[#16BDF0] type-eyebrow block border-l-4 border-[#16BDF0] pl-3">
                 Envie sua mensagem
               </span>
               <div className="glass-panel p-6 border-white/5 bg-[rgba(10,27,48,0.35)]">
@@ -205,18 +203,18 @@ export default function ContactPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#16BDF0]/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#095BFF]/10 blur-3xl rounded-full" />
 
-            <h2 className="text-white font-bold text-2xl sm:text-3xl tracking-tight mb-4 relative z-10">
+            <h2 className="text-white type-section-title mb-4 relative z-10">
               Vamos construir o próximo passo juntos?
             </h2>
             
-            <p className="text-[#B6BEC8] text-sm sm:text-base mb-8 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
+            <p className="text-[#B6BEC8] type-body mb-8 max-w-xl mx-auto relative z-10">
               Entre em contato e conte brevemente o que sua escola, instituição de ensino ou empresa precisa. A equipe +Seven entrará em contato para agendar uma conversa inicial.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <button
                 onClick={handleScrollToForm}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all text-sm flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-white bg-[#095BFF] hover:bg-[#095BFF]/95 shadow-lg shadow-[#095BFF]/15 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Preencher formulário</span>
                 <ArrowRight className="w-4 h-4" />
@@ -226,7 +224,7 @@ export default function ContactPage() {
                 href={siteContent.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl type-button text-[#B6BEC8] hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 <span>Conversar no WhatsApp</span>
