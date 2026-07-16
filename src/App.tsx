@@ -16,7 +16,7 @@ import NotFoundPage from './pages/NotFoundPage';
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-[#050B16] text-[#F7F8FA] antialiased selection:bg-[#16BDF0]/30 selection:text-white">
+      <div className="flex flex-col min-h-screen bg-[#0D0F14] text-[#F7F8FA] antialiased selection:bg-[#16BDF0]/30 selection:text-white">
         
         {/* Compact Premium Header */}
         <Header />

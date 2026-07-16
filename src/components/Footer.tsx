@@ -1,33 +1,22 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Instagram, ArrowUp, Calendar } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const Logo = () => {
-    return (
-      <div className="flex flex-col items-center justify-center py-1">
-        <img
-          src="/assets/brand/Numero 7 logo +Seven.png"
-          alt="+Seven Icon"
-          className="h-12 sm:h-16 w-auto object-contain block"
-          referrerPolicy="no-referrer"
-        />
-        <img
-          src="/assets/brand/Texto 3D +Seven.png"
-          alt="+Seven Text"
-          className="h-6 sm:h-8 w-auto object-contain block -mt-1.5"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-    );
-  };
-
   return (
-    <footer id="app-footer" className="bg-[#07111F] border-t border-[rgba(247,248,250,0.06)] pt-16 pb-8 relative overflow-hidden">
+    <footer
+      id="app-footer"
+      className="pt-16 pb-8 relative overflow-hidden"
+      style={{
+        backgroundColor: '#090D15',
+        borderTop: '1px solid rgba(22, 189, 240, 0.14)'
+      }}
+    >
       {/* Background glow decorator */}
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#095BFF]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="absolute top-0 left-1/4 w-[300px] h-[300px] bg-[#16BDF0]/3 blur-[100px] rounded-full pointer-events-none -z-10" />
@@ -37,8 +26,16 @@ export default function Footer() {
           
           {/* Column 1: Brand & Description */}
           <div className="md:col-span-5 flex flex-col gap-6">
-            <Link to="/" className="inline-block self-start focus:outline-none focus:ring-2 focus:ring-[#16BDF0] rounded-lg p-1">
-              <Logo />
+            <Link
+              to="/"
+              className="inline-block self-start focus:outline-none focus:ring-2 focus:ring-[#16BDF0] rounded-lg p-1 flex items-center"
+              aria-label="Ir para a página inicial"
+            >
+              <BrandLogo
+                variant="negative"
+                className="w-[160px] lg:w-[210px] h-auto"
+                loading="lazy"
+              />
             </Link>
             <p className="text-[#B6BEC8] text-sm leading-relaxed max-w-sm">
               {siteContent.brand.description} Oferecemos orientações, consultoria estratégica e formações sob medida para o crescimento seguro e com propósito de instituições e empresas.

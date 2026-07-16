@@ -6,6 +6,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
 }
 
 body {
@@ -14,8 +15,14 @@ body {
   font-size: var(--text-base);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-body);
-  color: var(--white-primary);
-  background: var(--background-primary);
+  color: var(--text-primary);
+  background:
+    radial-gradient(
+      circle at 75% 10%,
+      rgba(9, 19, 90, 0.18),
+      transparent 34%
+    ),
+    var(--background-primary);
 }
 
 button,

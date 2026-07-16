@@ -1,4 +1,41 @@
 :root {
+  --brand-graphite: #0D0F14;
+  --brand-navy: #09135A;
+  --brand-cyan: #16BDF0;
+  --brand-white: #F7F8FA;
+  --brand-gray: #B6BEC8;
+  --brand-muted: #7E8997;
+
+  --background-primary: #0D0F14;
+  --background-secondary: #090D15;
+  --background-deep: #07111F;
+
+  --surface-primary: #11151D;
+  --surface-secondary: #0A1321;
+  --surface-elevated: #121925;
+
+  --surface-glass: rgba(11, 20, 34, 0.62);
+  --surface-glass-strong: rgba(8, 17, 29, 0.84);
+
+  --text-primary: #F7F8FA;
+  --text-secondary: #B6BEC8;
+  --text-muted: #7E8997;
+  --text-accent: #16BDF0;
+
+  --border-subtle: rgba(247, 248, 250, 0.10);
+  --border-medium: rgba(247, 248, 250, 0.16);
+  --border-accent: rgba(22, 189, 240, 0.22);
+
+  --shadow-soft: 0 18px 55px rgba(0, 0, 0, 0.28);
+  --shadow-deep: 0 28px 80px rgba(0, 0, 0, 0.44);
+  --shadow-accent: 0 0 36px rgba(22, 189, 240, 0.10);
+
+  --gradient-primary:
+    linear-gradient(135deg, #09135A 0%, #16BDF0 100%);
+
+  --gradient-background:
+    linear-gradient(180deg, #0D0F14 0%, #090D15 100%);
+
   --font-primary:
     "Garet",
     "Manrope",

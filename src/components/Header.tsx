@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import BrandLogo from './BrandLogo';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,40 +61,31 @@ export default function Header() {
     { name: 'Contato', path: '/contato' }
   ];
 
-  // Logo component using the high-quality uncorrupted images from public stacked vertically
-  const Logo = () => {
-    return (
-      <div className="flex flex-col items-center justify-center py-1">
-        <img
-          src="/assets/brand/Numero 7 logo +Seven.png"
-          alt="+Seven Icon"
-          className="h-10 sm:h-12 w-auto object-contain block"
-          referrerPolicy="no-referrer"
-        />
-        <img
-          src="/assets/brand/Texto 3D +Seven.png"
-          alt="+Seven Text"
-          className="h-5 sm:h-6 w-auto object-contain block -mt-1.5"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-    );
-  };
-
   return (
     <>
       <header
         id="app-header"
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 border-b ${
-          isScrolled
-            ? 'bg-[#050B16]/85 backdrop-blur-md border-[rgba(22,189,240,0.15)] py-3'
-            : 'bg-transparent border-transparent py-5'
+        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+          isScrolled ? 'py-3' : 'py-5'
         }`}
+        style={{
+          background: 'rgba(13, 15, 20, 0.92)',
+          backdropFilter: 'blur(18px)',
+          borderBottom: '1px solid rgba(22, 189, 240, 0.12)'
+        }}
       >
         <div className="page-shell flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="focus:outline-none focus:ring-2 focus:ring-[#16BDF0] rounded-lg p-1" aria-label="+Seven Home">
-            <Logo />
+          <Link
+            to="/"
+            className="focus:outline-none focus:ring-2 focus:ring-[#16BDF0] rounded-lg p-1 flex items-center"
+            aria-label="Ir para a página inicial"
+          >
+            <BrandLogo
+              variant="negative"
+              className="w-[140px] md:w-[165px] lg:w-[195px] h-auto"
+              fetchPriority="high"
+            />
           </Link>
 
           {/* Desktop Navigation */}
