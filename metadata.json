@@ -1,0 +1,6 @@
+{
+  "name": "+Seven",
+  "description": "Website institucional premium da +Seven. Orientações educacionais, empresariais, consultoria e formações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

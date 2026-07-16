@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "./styles/global.css";
+
+@theme {
+  --font-sans: var(--font-primary);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  
+  --color-bg-primary: #050B16;
+  --color-bg-secondary: #07111F;
+  --color-bg-graphite: #0D0F14;
+
+  --color-navy-primary: #09135A;
+  --color-blue-action: #095BFF;
+  --color-cyan-primary: #16BDF0;
+
+  --color-white-primary: #F7F8FA;
+  --color-gray-secondary: #B6BEC8;
+  --color-gray-muted: #7F8A98;
+}
+
+:root {
+  --background-primary: #050B16;
+  --background-secondary: #07111F;
+  --background-graphite: #0D0F14;
+
+  --surface-card: rgba(10, 27, 48, 0.82);
+  --surface-card-strong: rgba(8, 22, 39, 0.94);
+  --surface-glass: rgba(12, 31, 53, 0.68);
+
+  --navy-primary: #09135A;
+  --blue-action: #095BFF;
+  --cyan-primary: #16BDF0;
+
+  --white-primary: #F7F8FA;
+  --gray-secondary: #B6BEC8;
+  --gray-muted: #7F8A98;
+
+  --border-cyan: rgba(22, 189, 240, 0.28);
+  --border-light: rgba(247, 248, 250, 0.14);
+
+  --shadow-deep: 0 24px 70px rgba(0, 0, 0, 0.42);
+  --shadow-cyan: 0 0 32px rgba(22, 189, 240, 0.12);
+
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 22px;
+}
+
+/* Base resets & custom scrollbar */
+html {
+  scroll-behavior: smooth;
+  background-color: #050B16;
+  color: #F7F8FA;
+  font-family: var(--font-primary);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050B16;
+}
+::-webkit-scrollbar-thumb {
+  background: #07111F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16BDF0;
+}
+
+/* Custom Glassmorphism Classes */
+.glass-panel {
+  background: rgba(10, 27, 48, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(22, 189, 240, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+}
+
+.glass-panel-strong {
+  background: rgba(8, 22, 39, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(22, 189, 240, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.glass-card {
+  background: rgba(10, 27, 48, 0.82);
+  border: 1px solid rgba(22, 189, 240, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+  /* transition property limited to non-transform styles to avoid fight with motion */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.glass-input {
+  background: rgba(7, 17, 31, 0.6);
+  border: 1px solid rgba(247, 248, 250, 0.14);
+  border-radius: 8px;
+  color: #F7F8FA;
+  transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #16BDF0;
+  box-shadow: 0 0 12px rgba(22, 189, 240, 0.2);
+  background: rgba(10, 27, 48, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #F7F8FA 0%, #B6BEC8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #16BDF0 0%, #095BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image overlay masks */
+.photo-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-mask::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, #050B16 100%),
+              linear-gradient(to right, transparent 60%, #050B16 100%);
+  pointer-events: none;
+}
+
+.photo-mask-left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, #050B16 100%),
+              linear-gradient(to left, transparent 60%, #050B16 100%);
+  pointer-events: none;
+}
+
+/* Fluid responsive shell container */
+.page-shell {
+  width: min(1440px, calc(100% - 40px));
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .page-shell {
+    width: min(1440px, calc(100% - 80px));
+  }
+}
+@media (min-width: 1536px) {
+  .page-shell {
+    width: min(1520px, calc(100% - 100px));
+  }
+}
