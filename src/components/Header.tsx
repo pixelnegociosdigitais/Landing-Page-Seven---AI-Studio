@@ -78,7 +78,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="focus:outline-none focus:ring-2 focus:ring-[#16BDF0] rounded-lg p-1 flex items-center"
+            className="focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg p-1 flex items-center"
             aria-label="Ir para a página inicial"
           >
             <BrandLogo
@@ -95,8 +95,8 @@ export default function Header() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative py-2 text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-[#16BDF0] focus:outline-none focus:text-[#16BDF0] ${
-                    isActive ? 'text-white' : 'text-[#B6BEC8]'
+                  `relative py-2 text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-[var(--text-primary)] focus:outline-none focus:text-[var(--text-primary)] ${
+                    isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'
                   }`
                 }
               >
@@ -104,7 +104,7 @@ export default function Header() {
                   <>
                     <span>{link.name}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#16BDF0] rounded-full animate-fade-in" />
+                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--brand-cyan)] rounded-full animate-fade-in" />
                     )}
                   </>
                 )}
@@ -116,7 +116,8 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               to="/contato"
-              className="relative overflow-hidden group px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/90 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-[#095BFF]/20 hover:shadow-[#095BFF]/35 active:scale-98"
+              className="relative overflow-hidden group px-5 py-2.5 rounded-lg text-sm font-bold text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] active:scale-98 flex items-center gap-2 shadow-md shadow-black/20 hover:shadow-lg"
+              style={{ background: 'var(--gradient-primary)' }}
             >
               <span>Agende seu diagnóstico</span>
               <Calendar className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -126,7 +127,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[#B6BEC8] hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#16BDF0]"
+            className="md:hidden p-2 text-[var(--text-secondary)] hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -139,11 +140,10 @@ export default function Header() {
       {/* Mobile Navigation Drawer */}
       <div
         id="mobile-navigation"
-        className={`fixed inset-0 z-30 md:hidden bg-[#050B16] flex flex-col justify-between pt-24 pb-8 px-6 transition-all duration-300 ease-out ${
+        className={`fixed inset-0 z-30 md:hidden bg-[var(--surface-glass-strong)] backdrop-blur-lg flex flex-col justify-between pt-24 pb-8 px-6 transition-all duration-300 ease-out border-l border-[var(--border-subtle)] ${
           isMobileMenuOpen ? 'opacity-100 translate-x-0 pointer-events-auto' : 'opacity-0 translate-x-full pointer-events-none'
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07111F]/50 to-transparent -z-10 pointer-events-none" />
         
         {/* Navigation Links */}
         <nav className="flex flex-col gap-6" aria-label="Menu Mobile">
@@ -152,8 +152,8 @@ export default function Header() {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `text-2xl font-bold tracking-wide transition-colors py-2 border-b border-[rgba(247,248,250,0.06)] focus:outline-none focus:text-[#16BDF0] ${
-                  isActive ? 'text-[#16BDF0]' : 'text-[#B6BEC8] hover:text-white'
+                `text-2xl font-bold tracking-wide transition-all py-2 focus:outline-none focus:text-[var(--brand-cyan)] ${
+                  isActive ? 'text-[var(--text-primary)] border-b-2 border-[var(--brand-cyan)]' : 'text-[var(--text-secondary)] border-b border-[var(--border-subtle)] hover:text-[var(--text-primary)]'
                 }`
               }
             >
@@ -166,12 +166,13 @@ export default function Header() {
         <div className="flex flex-col gap-4">
           <Link
             to="/contato"
-            className="w-full py-4 rounded-xl text-center font-bold text-white bg-[#095BFF] hover:bg-[#095BFF]/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-[#095BFF]/15"
+            className="w-full py-4 rounded-xl text-center font-bold text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] flex items-center justify-center gap-2 shadow-md shadow-black/20"
+            style={{ background: 'var(--gradient-primary)' }}
           >
             <span>Agende seu diagnóstico</span>
             <Calendar className="w-5 h-5" />
           </Link>
-          <p className="text-center text-xs text-[#7F8A98] mt-2 font-medium">
+          <p className="text-center text-xs text-[var(--text-muted)] mt-2 font-medium">
             {siteContent.brand.name} • {siteContent.brand.tagline}
           </p>
         </div>

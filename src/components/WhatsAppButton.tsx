@@ -10,12 +10,11 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30 group"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center transition-all duration-[180ms] hover:-translate-y-[2px] hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30 group"
+      style={{ boxShadow: '0 12px 32px rgba(0, 0, 0, 0.34)' }}
       aria-label="Falar no WhatsApp"
       id="floating-whatsapp"
     >
-      {/* Decorative pulse ring */}
-      <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping group-hover:animate-none" />
       
       {/* WhatsApp SVG Icon */}
       <svg

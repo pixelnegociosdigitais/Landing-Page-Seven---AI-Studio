@@ -38,7 +38,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.8, y: 20 }}
           transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           onClick={scrollToTop}
-          className="fixed bottom-24 right-6 z-40 p-3 rounded-full bg-gradient-to-r from-[#095BFF] to-[#16BDF0] hover:brightness-110 text-white shadow-xl shadow-[#095BFF]/20 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#16BDF0] border border-white/10 flex items-center justify-center group"
+          className="fixed bottom-24 right-6 z-40 p-3 rounded-full bg-[var(--surface-glass-strong)] backdrop-blur-md text-[var(--text-secondary)] shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] border border-[var(--border-subtle)] flex items-center justify-center group transition-all duration-200 hover:border-[var(--border-accent)] hover:text-[var(--brand-cyan)]"
           title="Voltar ao topo"
           aria-label="Voltar ao topo"
         >
