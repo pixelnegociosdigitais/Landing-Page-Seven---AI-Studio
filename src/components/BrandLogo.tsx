@@ -14,8 +14,8 @@ export default function BrandLogo({
   variant = 'primary'
 }: BrandLogoProps) {
   const src = variant === 'negative' 
-    ? "/assets/brand/logo-plusseven-negativa.png" 
-    : "/assets/brand/logo-plusseven-oficial.png";
+    ? "/brand/logo-plusseven-negativa.png" 
+    : "/brand/logo-plusseven-oficial.png";
 
   return (
     <img

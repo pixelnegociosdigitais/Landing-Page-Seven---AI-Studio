@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Send, CheckCircle2, AlertCircle, MessageSquare } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import { Button } from './ui';
 
 interface FormData {
   name: string;
@@ -274,13 +275,15 @@ export default function ContactForm() {
         </div>
 
         {/* Submit Button */}
-        <button
+        <Button
           type="submit"
-          className="mt-2 w-full py-3.5 bg-[#095BFF] hover:bg-[#095BFF]/95 text-white type-button rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#095BFF]/20 active:scale-98 transition-all"
+          variant="primary"
+          size="lg"
+          className="mt-2 w-full shadow-lg shadow-[#095BFF]/20"
+          rightIcon={<Send className="w-4 h-4" />}
         >
-          <span>Enviar mensagem</span>
-          <Send className="w-4 h-4" />
-        </button>
+          Enviar mensagem
+        </Button>
 
         {/* Developer comment section: Where to insert backend API handler */}
         {/*

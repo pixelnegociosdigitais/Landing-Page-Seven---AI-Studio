@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
-import { siteContent } from '../content/siteContent';
 import BrandLogo from './BrandLogo';
 import { Container, ButtonLink } from './ui';
 
@@ -23,7 +22,7 @@ export default function Header() {
     // Initial call to set correct values
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname]); // Listen to location changes to recalculate on route switches
+  }, []);
 
   // Close mobile menu on escape key
   useEffect(() => {
@@ -36,7 +35,7 @@ export default function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Scroll to top on navigation path change
+  // Scroll to top and close menu on navigation path change
   useEffect(() => {
     window.scrollTo(0, 0);
     setIsMobileMenuOpen(false);
@@ -47,12 +46,23 @@ export default function Header() {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     };
   }, [isMobileMenuOpen]);
+
+  // Close mobile menu on window resize back to desktop breakpoint
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) { // lg breakpoint
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const navLinks = [
     { name: 'Início', path: '/' },
@@ -66,31 +76,30 @@ export default function Header() {
     <>
       <header
         id="app-header"
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-          isScrolled ? 'py-3' : 'py-5'
-        }`}
+        className="fixed top-0 left-0 w-full z-40 transition-all duration-300 flex items-center h-[70px] md:h-[78px] lg:h-[86px] border-b border-[var(--border-subtle)]"
         style={{
-          background: 'rgba(13, 15, 20, 0.92)',
-          backdropFilter: 'blur(18px)',
-          borderBottom: '1px solid rgba(22, 189, 240, 0.12)'
+          background: isScrolled ? 'rgba(13, 15, 20, 0.96)' : 'rgba(13, 15, 20, 0.84)',
+          backdropFilter: 'blur(17px)',
+          WebkitBackdropFilter: 'blur(17px)',
+          boxShadow: isScrolled ? '0 10px 32px rgba(0, 0, 0, 0.22)' : 'none'
         }}
       >
-        <Container size="xl" className="page-shell flex items-center justify-between">
+        <Container size="xl" className="h-full flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg p-1 flex items-center"
+            className="focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg p-1 flex items-center shrink-0"
             aria-label="Ir para a página inicial"
           >
             <BrandLogo
               variant="negative"
-              className="w-[140px] md:w-[165px] lg:w-[195px] h-auto"
+              className="w-[145px] md:w-[170px] lg:w-[195px] h-auto object-contain"
               fetchPriority="high"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Menu Principal">
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Menu Principal">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
@@ -105,7 +114,7 @@ export default function Header() {
                   <>
                     <span>{link.name}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--brand-cyan)] rounded-full animate-fade-in" />
+                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--brand-cyan)] rounded-full" />
                     )}
                   </>
                 )}
@@ -114,7 +123,7 @@ export default function Header() {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center shrink-0">
             <ButtonLink
               to="/contato"
               variant="primary"
@@ -129,7 +138,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[var(--text-secondary)] hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
+            className="lg:hidden flex items-center justify-center w-11 h-11 bg-[var(--surface-secondary)] border border-[var(--border-subtle)] hover:border-[var(--border-accent)] text-[var(--text-primary)] rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -139,45 +148,52 @@ export default function Header() {
         </Container>
       </header>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Navigation Dropdown */}
       <div
         id="mobile-navigation"
-        className={`fixed inset-0 z-30 md:hidden bg-[var(--surface-glass-strong)] backdrop-blur-lg flex flex-col justify-between pt-24 pb-8 px-6 transition-all duration-300 ease-out border-l border-[var(--border-subtle)] ${
-          isMobileMenuOpen ? 'opacity-100 translate-x-0 pointer-events-auto' : 'opacity-0 translate-x-full pointer-events-none'
+        className={`fixed top-[70px] md:top-[78px] left-0 w-full z-30 lg:hidden bg-[var(--surface-glass-strong)] backdrop-blur-lg border-b border-[var(--border-subtle)] shadow-[0_10px_32px_rgba(0,0,0,0.22)] py-6 px-6 flex flex-col gap-5 transition-all duration-300 ease-out origin-top ${
+          isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}
       >
-        
         {/* Navigation Links */}
-        <nav className="flex flex-col gap-6" aria-label="Menu Mobile">
+        <nav className="flex flex-col gap-2" aria-label="Menu Mobile">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
+              onClick={() => setIsMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `type-navigation transition-all py-2 focus:outline-none focus:text-[var(--brand-cyan)] ${
-                  isActive ? 'text-[var(--text-primary)] border-b-2 border-[var(--brand-cyan)]' : 'text-[var(--text-secondary)] border-b border-[var(--border-subtle)] hover:text-[var(--text-primary)]'
+                `w-full min-h-[48px] flex items-center px-4 type-navigation transition-colors duration-200 focus:outline-none focus:text-[var(--text-primary)] focus:ring-2 focus:ring-[var(--brand-cyan)] rounded-lg relative ${
+                  isActive
+                    ? 'text-[var(--text-primary)]'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                 }`
               }
             >
-              {link.name}
+              {({ isActive }) => (
+                <>
+                  {isActive && (
+                    <span className="absolute left-0 top-1/4 bottom-1/4 w-[3px] bg-[var(--brand-cyan)] rounded-full" />
+                  )}
+                  <span>{link.name}</span>
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
 
-        {/* Call to Action at Bottom */}
-        <div className="flex flex-col gap-4">
+        {/* Call to Action */}
+        <div className="pt-2">
           <ButtonLink
             to="/contato"
             variant="primary"
             size="md"
             fullWidth
+            onClick={() => setIsMobileMenuOpen(false)}
             rightIcon={<Calendar className="w-5 h-5" />}
           >
             Agende seu diagnóstico
           </ButtonLink>
-          <p className="text-center text-xs text-[var(--text-muted)] mt-2 font-medium">
-            {siteContent.brand.name} • {siteContent.brand.tagline}
-          </p>
         </div>
       </div>
     </>
