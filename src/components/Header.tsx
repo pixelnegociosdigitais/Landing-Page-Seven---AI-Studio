@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
 import BrandLogo from './BrandLogo';
+import { Container, ButtonLink } from './ui';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -74,7 +75,7 @@ export default function Header() {
           borderBottom: '1px solid rgba(22, 189, 240, 0.12)'
         }}
       >
-        <div className="page-shell flex items-center justify-between">
+        <Container size="xl" className="page-shell flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
@@ -114,14 +115,15 @@ export default function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Link
+            <ButtonLink
               to="/contato"
-              className="relative overflow-hidden group px-5 py-2.5 rounded-lg type-button text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] active:scale-98 flex items-center gap-2 shadow-md shadow-black/20 hover:shadow-lg"
-              style={{ background: 'var(--gradient-primary)' }}
+              variant="primary"
+              size="sm"
+              className="group"
+              rightIcon={<Calendar className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />}
             >
-              <span>Agende seu diagnóstico</span>
-              <Calendar className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+              Agende seu diagnóstico
+            </ButtonLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -134,7 +136,7 @@ export default function Header() {
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-        </div>
+        </Container>
       </header>
 
       {/* Mobile Navigation Drawer */}
@@ -164,14 +166,15 @@ export default function Header() {
 
         {/* Call to Action at Bottom */}
         <div className="flex flex-col gap-4">
-          <Link
+          <ButtonLink
             to="/contato"
-            className="w-full py-4 rounded-xl text-center type-button text-white border border-[var(--border-subtle)] transition-all duration-200 hover:-translate-y-[2px] flex items-center justify-center gap-2 shadow-md shadow-black/20"
-            style={{ background: 'var(--gradient-primary)' }}
+            variant="primary"
+            size="md"
+            fullWidth
+            rightIcon={<Calendar className="w-5 h-5" />}
           >
-            <span>Agende seu diagnóstico</span>
-            <Calendar className="w-5 h-5" />
-          </Link>
+            Agende seu diagnóstico
+          </ButtonLink>
           <p className="text-center text-xs text-[var(--text-muted)] mt-2 font-medium">
             {siteContent.brand.name} • {siteContent.brand.tagline}
           </p>

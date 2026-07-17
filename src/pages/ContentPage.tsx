@@ -225,9 +225,10 @@ export default function ContentPage() {
                 <img
                   src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80"
                   alt="Legislação antirracista na prática educacional"
-                  className="w-full h-full object-cover opacity-90"
+                  className="w-full h-full object-cover opacity-100"
+                  referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07111F] via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07111F] via-transparent to-transparent opacity-55" />
               </div>
 
             </div>

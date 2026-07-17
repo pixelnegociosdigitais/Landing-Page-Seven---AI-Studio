@@ -72,10 +72,11 @@ export default function ContactPage() {
             <img
               src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
               alt="Profissional com headset sorrindo pronta para atendimento"
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover opacity-100"
+              referrerPolicy="no-referrer"
             />
             {/* Dark vignette gradient overlay to guarantee soft integration */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-transparent opacity-55" />
           </div>
 
         </AnimatedSection>
