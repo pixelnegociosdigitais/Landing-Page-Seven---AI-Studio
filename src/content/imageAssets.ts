@@ -7,51 +7,51 @@ export type SiteImage = {
 
 export const siteImages = {
   hero: {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80",
+    src: "/assets/images/site/hero-home.webp",
     alt: "Equipe +Seven trabalhando em conjunto e planejando soluções",
-    width: 1000,
-    height: 750,
+    width: 1402,
+    height: 1122,
   },
 
   homeEducation: {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+    src: "/assets/images/site/home-educacao.webp",
     alt: "Aluno negro lendo livro atentamente em sala de aula de forma dedicada",
-    width: 800,
-    height: 600,
+    width: 1448,
+    height: 1086,
   },
 
   homeBusiness: {
-    src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+    src: "/assets/images/site/home-negocios.webp",
     alt: "Profissional negra de negócios sorrindo confiante no escritório",
-    width: 800,
-    height: 600,
+    width: 1448,
+    height: 1086,
   },
 
   solutionsHero: {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    src: "/assets/images/site/solucoes-hero.webp",
     alt: "Equipe +Seven planejando soluções estratégicas para o desenvolvimento institucional",
-    width: 800,
-    height: 600,
+    width: 1586,
+    height: 992,
   },
 
   aboutHero: {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    src: "/assets/images/site/sobre-hero.webp",
     alt: "Reunião de alinhamento estratégico com equipe da +Seven",
-    width: 800,
-    height: 600,
+    width: 1586,
+    height: 992,
   },
 
   contentFeatured: {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80",
+    src: "/assets/images/site/conteudos-destaque.webp",
     alt: "Legislação antirracista na prática educacional e debate pedagógico",
-    width: 600,
-    height: 450,
+    width: 1448,
+    height: 1086,
   },
 
   contactHero: {
-    src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+    src: "/assets/images/site/contato-hero.webp",
     alt: "Profissional com headset sorrindo pronta para realizar o atendimento consultivo",
-    width: 800,
-    height: 600,
+    width: 1448,
+    height: 1086,
   },
 } satisfies Record<string, SiteImage>;

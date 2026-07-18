@@ -11,7 +11,10 @@ interface SEOProps {
 export default function SEO({ title, description, type = 'website', image }: SEOProps) {
   const location = useLocation();
   const currentUrl = window.location.origin + location.pathname;
-  const defaultImage = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&h=630&q=80";
+  const defaultImage = window.location.origin + "/assets/images/site/hero-home.webp";
+  const ogImage = image
+    ? (image.startsWith('http') ? image : window.location.origin + image)
+    : defaultImage;
 
   useEffect(() => {
     // 1. Update Document Title
@@ -45,12 +48,12 @@ export default function SEO({ title, description, type = 'website', image }: SEO
     updateMetaTag('property', 'og:description', description);
     updateMetaTag('property', 'og:url', currentUrl);
     updateMetaTag('property', 'og:type', type);
-    updateMetaTag('property', 'og:image', image || defaultImage);
+    updateMetaTag('property', 'og:image', ogImage);
 
     // 4. Update Twitter Card Tags
     updateMetaTag('name', 'twitter:title', title);
     updateMetaTag('name', 'twitter:description', description);
-    updateMetaTag('name', 'twitter:image', image || defaultImage);
+    updateMetaTag('name', 'twitter:image', ogImage);
     updateMetaTag('name', 'twitter:url', currentUrl);
 
   }, [title, description, type, image, currentUrl]);

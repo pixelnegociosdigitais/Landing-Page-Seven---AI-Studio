@@ -44,7 +44,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column: Wide Embedded Photo */}
-            <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden photo-mask shadow-2xl">
+            <div className="lg:col-span-5 w-full flex justify-center items-center">
               <img
                 src={siteImages.aboutHero.src}
                 alt={siteImages.aboutHero.alt}
@@ -52,10 +52,9 @@ export default function AboutPage() {
                 height={siteImages.aboutHero.height}
                 loading="eager"
                 decoding="async"
-                className="w-full h-full object-cover opacity-100"
+                className="w-full h-auto object-contain rounded-[28px] border border-white/10 shadow-2xl"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-transparent opacity-50" />
             </div>
           </Container>
         </AnimatedSection>

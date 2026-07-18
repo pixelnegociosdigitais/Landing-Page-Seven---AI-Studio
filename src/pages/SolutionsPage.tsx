@@ -33,108 +33,95 @@ export default function SolutionsPage() {
             1. SOLUTIONS HERO SECTION (Matches layout of reference-solucoes.png)
             ================================================== */}
           <AnimatedSection className="border-b border-white/5">
-            <Container size="xl" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-8 lg:py-16">
-              {/* Left Content Column */}
-              <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-                <Badge variant="accent" className="max-w-max">
-                  {siteContent.solutions.hero.tag}
-                </Badge>
-                
-                <h1 className="text-white type-section-title max-w-2xl">
-                  Soluções para <span className="text-[#16BDF0] text-transparent bg-clip-text bg-gradient-to-r from-[#16BDF0] to-[#095BFF]">transformar desafios</span> em resultados.
-                </h1>
-                
-                <p className="text-[#B6BEC8] type-body-large max-w-xl">
-                  {siteContent.solutions.hero.description}
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
-                  <Button
-                    onClick={handleScrollToCards}
-                    variant="primary"
-                    size="md"
-                    className="w-full sm:w-auto shadow-lg shadow-[#095BFF]/20"
-                    rightIcon={<ArrowRight className="w-4 h-4" />}
-                  >
-                    Conhecer nossas soluções
-                  </Button>
+            <Container size="xl" className="py-8 lg:py-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                {/* Left Content Column */}
+                <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+                  <Badge variant="accent" className="max-w-max">
+                    {siteContent.solutions.hero.tag}
+                  </Badge>
                   
-                  <ButtonLink
-                    href={siteContent.contact.whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="secondary"
-                    size="md"
-                    className="w-full sm:w-auto border border-white/10 bg-white/5 hover:bg-white/10"
-                    leftIcon={<Phone className="w-4 h-4 text-[#25D366]" />}
-                  >
-                    {siteContent.solutions.hero.ctaSecondary}
-                  </ButtonLink>
+                  <h1 className="text-white type-section-title max-w-2xl">
+                    Soluções para <span className="text-[#16BDF0] text-transparent bg-clip-text bg-gradient-to-r from-[#16BDF0] to-[#095BFF]">transformar desafios</span> em resultados.
+                  </h1>
+                  
+                  <p className="text-[#B6BEC8] type-body-large max-w-xl">
+                    {siteContent.solutions.hero.description}
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
+                    <Button
+                      onClick={handleScrollToCards}
+                      variant="primary"
+                      size="md"
+                      className="w-full sm:w-auto shadow-lg shadow-[#095BFF]/20"
+                      rightIcon={<ArrowRight className="w-4 h-4" />}
+                    >
+                      Conhecer nossas soluções
+                    </Button>
+                    
+                    <ButtonLink
+                      href={siteContent.contact.whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="secondary"
+                      size="md"
+                      className="w-full sm:w-auto border border-white/10 bg-white/5 hover:bg-white/10"
+                      leftIcon={<Phone className="w-4 h-4 text-[#25D366]" />}
+                    >
+                      {siteContent.solutions.hero.ctaSecondary}
+                    </ButtonLink>
+                  </div>
+                </div>
+
+                {/* Right Column: Clean Embedded Photograph */}
+                <div className="lg:col-span-5 w-full flex justify-center items-center">
+                  <img
+                    src={siteImages.solutionsHero.src}
+                    alt={siteImages.solutionsHero.alt}
+                    width={siteImages.solutionsHero.width}
+                    height={siteImages.solutionsHero.height}
+                    loading="eager"
+                    decoding="async"
+                    className="w-full h-auto object-contain rounded-[28px] border border-white/10 shadow-lg"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
 
-              {/* Right Column: Embedded Photograph with glassmorphic pillars container overlay */}
-              <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden photo-mask shadow-2xl">
-                <img
-                  src={siteImages.solutionsHero.src}
-                  alt={siteImages.solutionsHero.alt}
-                  width={siteImages.solutionsHero.width}
-                  height={siteImages.solutionsHero.height}
-                  loading="eager"
-                  decoding="async"
-                  className="w-full h-full object-cover opacity-100"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-transparent opacity-55" />
-                
-                {/* Floating Glassmorphic Container (from reference-solucoes.png right side overlay) */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 glass-panel border-[#16BDF0]/20 flex flex-col gap-4">
-                  
-                  {/* Diagnóstico Item */}
-                  <div className="flex items-start gap-3.5 group/item">
-                    <motion.div 
-                      whileHover={{ scale: 1.2, rotate: -10 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="w-8 h-8 rounded-lg bg-[#16BDF0]/15 flex items-center justify-center text-[#16BDF0] shrink-0 cursor-pointer"
-                    >
-                      <Search className="w-4 h-4" />
-                    </motion.div>
-                    <div>
-                      <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#16BDF0]">Diagnóstico</h4>
-                      <p className="text-[#B6BEC8] type-body-small">Investigamos a fundo seu cenário atual para clarear os gargalos.</p>
-                    </div>
+              {/* Bloco de etapas fora da fotografia */}
+              <div className="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Diagnóstico Item */}
+                <div className="p-6 rounded-2xl bg-[#0A1321] border border-white/5 shadow-md flex items-start gap-4 text-left">
+                  <div className="w-10 h-10 rounded-xl bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0] shrink-0">
+                    <Search className="w-5 h-5" />
                   </div>
-
-                  {/* Estratégia Item */}
-                  <div className="flex items-start gap-3.5 group/item">
-                    <motion.div 
-                      whileHover={{ scale: 1.2, rotate: 12 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="w-8 h-8 rounded-lg bg-[#095BFF]/15 flex items-center justify-center text-[#095BFF] shrink-0 cursor-pointer"
-                    >
-                      <Target className="w-4 h-4" />
-                    </motion.div>
-                    <div>
-                      <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#095BFF]">Estratégia</h4>
-                      <p className="text-[#B6BEC8] type-body-small">Desenvolvemos planos práticos orientados a propósitos reais.</p>
-                    </div>
+                  <div>
+                    <h3 className="text-white font-medium text-lg mb-1">Diagnóstico</h3>
+                    <p className="text-[#B6BEC8] text-sm leading-relaxed">Investigamos a fundo seu cenário atual para clarear os gargalos.</p>
                   </div>
+                </div>
 
-                  {/* Acompanhamento Item */}
-                  <div className="flex items-start gap-3.5 group/item">
-                    <motion.div 
-                      whileHover={{ scale: 1.2, rotate: -8 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center text-[#25D366] shrink-0 cursor-pointer"
-                    >
-                      <TrendingUp className="w-4 h-4" />
-                    </motion.div>
-                    <div>
-                      <h4 className="text-white type-card-title transition-colors group-hover/item:text-[#25D366]">Acompanhamento</h4>
-                      <p className="text-[#B6BEC8] type-body-small">Garantimos suporte consultivo contínuo para sustentar a evolução.</p>
-                    </div>
+                {/* Estratégia Item */}
+                <div className="p-6 rounded-2xl bg-[#0A1321] border border-white/5 shadow-md flex items-start gap-4 text-left">
+                  <div className="w-10 h-10 rounded-xl bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0] shrink-0">
+                    <Target className="w-5 h-5" />
                   </div>
+                  <div>
+                    <h3 className="text-white font-medium text-lg mb-1">Estratégia</h3>
+                    <p className="text-[#B6BEC8] text-sm leading-relaxed">Desenvolvemos planos práticos orientados a propósitos reais.</p>
+                  </div>
+                </div>
 
+                {/* Acompanhamento Item */}
+                <div className="p-6 rounded-2xl bg-[#0A1321] border border-white/5 shadow-md flex items-start gap-4 text-left">
+                  <div className="w-10 h-10 rounded-xl bg-[#16BDF0]/10 border border-[#16BDF0]/20 flex items-center justify-center text-[#16BDF0] shrink-0">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-medium text-lg mb-1">Acompanhamento</h3>
+                    <p className="text-[#B6BEC8] text-sm leading-relaxed">Garantimos suporte consultivo contínuo para sustentar a evolução.</p>
+                  </div>
                 </div>
               </div>
             </Container>
