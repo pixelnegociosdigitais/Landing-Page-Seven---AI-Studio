@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, GraduationCap, Briefcase, Users, CheckCircle2, ChevronRight, Phone } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import { siteImages } from '../content/imageAssets';
 import { motion } from 'motion/react';
 import FAQSection from '../components/FAQSection';
-import ResultsSection from '../components/ResultsSection';
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import SEO from '../components/SEO';
@@ -193,8 +193,12 @@ export default function HomePage() {
                 {/* Left portrait photo - smoothly masked */}
                 <div className="lg:col-span-5 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden photo-mask shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                    alt="Aluno negro lendo livro atentamente em sala de aula"
+                    src={siteImages.homeEducation.src}
+                    alt={siteImages.homeEducation.alt}
+                    width={siteImages.homeEducation.width}
+                    height={siteImages.homeEducation.height}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover opacity-100"
                     referrerPolicy="no-referrer"
                   />
@@ -258,8 +262,12 @@ export default function HomePage() {
                 {/* Right portrait photo */}
                 <div className="lg:col-span-5 order-1 lg:order-2 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden photo-mask shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
-                    alt="Profissional negra de negócios sorrindo confiante"
+                    src={siteImages.homeBusiness.src}
+                    alt={siteImages.homeBusiness.alt}
+                    width={siteImages.homeBusiness.width}
+                    height={siteImages.homeBusiness.height}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover opacity-100"
                     referrerPolicy="no-referrer"
                   />
@@ -268,13 +276,6 @@ export default function HomePage() {
               </div>
             </Container>
           </Section>
-        </AnimatedSection>
-
-        {/* ==================================================
-            RESULTS & PERFORMANCE METRICS
-            ================================================== */}
-        <AnimatedSection>
-          <ResultsSection />
         </AnimatedSection>
 
         {/* ==================================================

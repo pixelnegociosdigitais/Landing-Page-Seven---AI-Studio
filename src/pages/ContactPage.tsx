@@ -1,5 +1,6 @@
 import { Phone, Mail, Instagram, ArrowRight, Sparkles, MessageSquare, HelpCircle } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import { siteImages } from '../content/imageAssets';
 import ContactForm from '../components/ContactForm';
 import { motion } from 'motion/react';
 import AnimatedSection from '../components/AnimatedSection';
@@ -76,8 +77,12 @@ export default function ContactPage() {
               {/* Right Column: Embedded Professional Portrait (no screens or generic frames) */}
               <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden photo-mask shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
-                  alt="Profissional com headset sorrindo pronta para atendimento"
+                  src={siteImages.contactHero.src}
+                  alt={siteImages.contactHero.alt}
+                  width={siteImages.contactHero.width}
+                  height={siteImages.contactHero.height}
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover opacity-100"
                   referrerPolicy="no-referrer"
                 />

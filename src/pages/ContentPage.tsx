@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, BookOpen, Puzzle, Sparkles, ArrowRight, Play, FileText, CheckCircle, AlertCircle, X, ChevronRight } from 'lucide-react';
 import { siteContent, ContentItem } from '../content/siteContent';
+import { siteImages } from '../content/imageAssets';
 import { motion } from 'motion/react';
 import AnimatedSection from '../components/AnimatedSection';
 import SEO from '../components/SEO';
@@ -229,8 +230,12 @@ export default function ContentPage() {
                   {/* Right Column Masked Illustration/Photo */}
                   <div className="lg:col-span-5 relative h-[220px] sm:h-[260px] rounded-xl overflow-hidden photo-mask">
                     <img
-                      src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80"
-                      alt="Legislação antirracista na prática educacional"
+                      src={siteImages.contentFeatured.src}
+                      alt={siteImages.contentFeatured.alt}
+                      width={siteImages.contentFeatured.width}
+                      height={siteImages.contentFeatured.height}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover opacity-100"
                       referrerPolicy="no-referrer"
                     />

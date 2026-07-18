@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShieldAlert, Heart, Compass, Fingerprint, Ear, Hammer, LineChart, Phone } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import { siteImages } from '../content/imageAssets';
 import { motion } from 'motion/react';
 import AnimatedSection from '../components/AnimatedSection';
 import SEO from '../components/SEO';
@@ -45,8 +46,12 @@ export default function AboutPage() {
             {/* Right Column: Wide Embedded Photo */}
             <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden photo-mask shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                alt="Reunião de alinhamento strategic +Seven"
+                src={siteImages.aboutHero.src}
+                alt={siteImages.aboutHero.alt}
+                width={siteImages.aboutHero.width}
+                height={siteImages.aboutHero.height}
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover opacity-100"
                 referrerPolicy="no-referrer"
               />

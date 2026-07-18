@@ -7,6 +7,12 @@ export type BrandLogoProps = {
   variant?: 'primary' | 'negative';
 };
 
+const symbolSrc =
+  "/assets/brand/plusseven-symbol.png";
+
+const negativeLogoSrc =
+  "/assets/brand/plusseven-logo-negative.png";
+
 export default function BrandLogo({
   className = '',
   loading,
@@ -14,14 +20,14 @@ export default function BrandLogo({
   variant = 'primary'
 }: BrandLogoProps) {
   const src = variant === 'negative' 
-    ? "/brand/logo-plusseven-negativa.png" 
-    : "/brand/logo-plusseven-oficial.png";
+    ? negativeLogoSrc 
+    : symbolSrc;
 
   return (
     <img
       src={src}
-      alt="+Seven Orientações Educacionais e Empresariais"
-      className={`object-contain ${className}`}
+      alt={variant === 'negative' ? "+Seven — Orientações Educacionais e Empresariais" : "+Seven Orientações Educacionais e Empresariais"}
+      className={`object-contain h-auto max-w-full ${className}`}
       loading={loading}
       fetchPriority={fetchPriority}
       referrerPolicy="no-referrer"

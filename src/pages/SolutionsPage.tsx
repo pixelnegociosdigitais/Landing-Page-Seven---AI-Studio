@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, Briefcase, Users, Search, Target, TrendingUp, ChevronRight, Phone } from 'lucide-react';
 import { siteContent } from '../content/siteContent';
+import { siteImages } from '../content/imageAssets';
 import { motion } from 'motion/react';
 import AnimatedSection from '../components/AnimatedSection';
 import SEO from '../components/SEO';
@@ -75,8 +76,12 @@ export default function SolutionsPage() {
               {/* Right Column: Embedded Photograph with glassmorphic pillars container overlay */}
               <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden photo-mask shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                  alt="Equipe +Seven planejando soluções estratégicas"
+                  src={siteImages.solutionsHero.src}
+                  alt={siteImages.solutionsHero.alt}
+                  width={siteImages.solutionsHero.width}
+                  height={siteImages.solutionsHero.height}
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover opacity-100"
                   referrerPolicy="no-referrer"
                 />
