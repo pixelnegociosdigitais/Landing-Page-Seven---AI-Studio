@@ -107,7 +107,7 @@ export default function ContentPage() {
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[var(--brand-cyan)]/5 blur-[140px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 left-10 w-[400px] h-[400px] bg-[#095BFF]/3 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-      <main className="page-shell">
+      <div className="page-shell">
         
         {/* ==================================================
             1. HERO EDITORIAL
@@ -485,7 +485,7 @@ export default function ContentPage() {
           </Container>
         </Section>
 
-      </main>
+      </div>
 
       {/* ==================================================
           7. DETAILED ARTICLE READER MODAL

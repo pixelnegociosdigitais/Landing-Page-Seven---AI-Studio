@@ -141,18 +141,18 @@ export default function Header() {
             className="lg:hidden flex items-center justify-center w-11 h-11 bg-[var(--surface-secondary)] border border-[var(--border-subtle)] hover:border-[var(--border-accent)] text-[var(--text-primary)] rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-cyan)]"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
-            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={isMobileMenuOpen ? "Fechar menu principal" : "Abrir menu principal"}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </Container>
       </header>
-
+ 
       {/* Mobile Navigation Dropdown */}
       <div
         id="mobile-navigation"
         className={`fixed top-[70px] md:top-[78px] left-0 w-full z-30 lg:hidden bg-[var(--surface-glass-strong)] backdrop-blur-lg border-b border-[var(--border-subtle)] shadow-[0_10px_32px_rgba(0,0,0,0.22)] py-6 px-6 flex flex-col gap-5 transition-all duration-300 ease-out origin-top ${
-          isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
+          isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto visible' : 'opacity-0 -translate-y-4 pointer-events-none invisible'
         }`}
       >
         {/* Navigation Links */}

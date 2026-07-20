@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center transition-all duration-[180ms] hover:-translate-y-[2px] hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30 group"
       style={{ boxShadow: '0 12px 32px rgba(0, 0, 0, 0.34)' }}
-      aria-label="Falar no WhatsApp"
+      aria-label="Falar com a +Seven pelo WhatsApp"
       id="floating-whatsapp"
     >
       

@@ -190,8 +190,8 @@ export default function HomePage() {
           <Section background="primary" spacing="compact" className="border-b border-[var(--border-subtle)]">
             <Container size="xl">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                {/* Left portrait photo - smoothly masked */}
-                <div className="lg:col-span-5 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden photo-mask shadow-xl">
+                {/* Left portrait photo */}
+                <div className="lg:col-span-5 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden shadow-xl border border-[var(--border-light)] bg-[var(--surface-primary)]">
                   <img
                     src={siteImages.homeEducation.src}
                     alt={siteImages.homeEducation.alt}
@@ -199,10 +199,9 @@ export default function HomePage() {
                     height={siteImages.homeEducation.height}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover opacity-100"
+                    className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-[var(--background-deep)]/10" />
                 </div>
 
                 {/* Right text box */}
@@ -260,7 +259,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right portrait photo */}
-                <div className="lg:col-span-5 order-1 lg:order-2 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden photo-mask shadow-xl">
+                <div className="lg:col-span-5 order-1 lg:order-2 relative h-[300px] sm:h-[380px] lg:h-[440px] rounded-2xl overflow-hidden shadow-xl border border-[var(--border-light)] bg-[var(--surface-primary)]">
                   <img
                     src={siteImages.homeBusiness.src}
                     alt={siteImages.homeBusiness.alt}
@@ -268,10 +267,9 @@ export default function HomePage() {
                     height={siteImages.homeBusiness.height}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover opacity-100"
+                    className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-[var(--background-deep)]/10" />
                 </div>
               </div>
             </Container>

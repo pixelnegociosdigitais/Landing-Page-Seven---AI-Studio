@@ -18,7 +18,7 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function RouteFallback() {
   return (
-    <main
+    <div
       className="
         flex
         min-h-[50vh]
@@ -35,7 +35,7 @@ function RouteFallback() {
       >
         Carregando página…
       </p>
-    </main>
+    </div>
   );
 }
 
@@ -44,11 +44,19 @@ export default function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-[#0D0F14] text-[#F7F8FA] antialiased selection:bg-[#16BDF0]/30 selection:text-white">
         
+        {/* Skip to Content Link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--brand-cyan)] focus:text-[#0D0F14] focus:font-medium focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Pular para o conteúdo
+        </a>
+
         {/* Compact Premium Header */}
         <Header />
 
         {/* Main Routed Content */}
-        <main className="flex-grow">
+        <main id="main-content" className="flex-grow focus:outline-none" tabIndex={-1}>
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
