@@ -141,7 +141,7 @@ export default function HomePage() {
                   </div>
                   <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Entender</h4>
                   <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
-                    Escutamos com empatia sua reality e mapeamos os desafios.
+                    Escutamos com empatia sua realidade e mapeamos os desafios.
                   </p>
                 </div>
 
