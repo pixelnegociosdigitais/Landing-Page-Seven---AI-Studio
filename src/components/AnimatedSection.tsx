@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -9,13 +9,15 @@ interface AnimatedSectionProps {
 }
 
 export default function AnimatedSection({ children, className = '', id, delay = 0 }: AnimatedSectionProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       id={id}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      whileInView={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
+      transition={shouldReduceMotion ? { duration: 0 } : { 
         duration: 0.8, 
         ease: [0.16, 1, 0.3, 1], // Smooth custom easeOut
         delay 

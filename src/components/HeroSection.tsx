@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { siteContent } from '../content/siteContent';
 import { siteImages } from '../content/imageAssets';
 import { Container, ButtonLink } from './ui';
 
 export default function HeroSection() {
   const [imgError, setImgError] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   // Animation variants
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: shouldReduceMotion ? 1 : 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: shouldReduceMotion ? { duration: 0 } : {
         staggerChildren: 0.15,
         delayChildren: 0.1,
       },
@@ -21,21 +22,21 @@ export default function HeroSection() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: shouldReduceMotion ? 0 : 0.6 },
     },
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: 24, scale: 0.98 },
+    hidden: { opacity: shouldReduceMotion ? 1 : 0, x: shouldReduceMotion ? 0 : 24, scale: shouldReduceMotion ? 1 : 0.98 },
     visible: {
       opacity: 1,
       x: 0,
       scale: 1,
-      transition: { duration: 0.8, delay: 0.2 },
+      transition: { duration: shouldReduceMotion ? 0 : 0.8, delay: shouldReduceMotion ? 0 : 0.2 },
     },
   };
 

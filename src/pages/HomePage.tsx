@@ -139,7 +139,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                     1
                   </div>
-                  <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Entender</h4>
+                  <h3 className="text-[var(--text-primary)] type-card-title mb-1.5">Entender</h3>
                   <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                     Escutamos com empatia sua realidade e mapeamos os desafios.
                   </p>
@@ -150,7 +150,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                     2
                   </div>
-                  <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Planejar</h4>
+                  <h3 className="text-[var(--text-primary)] type-card-title mb-1.5">Planejar</h3>
                   <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                     Criamos planos e estratégias totalmente personalizadas.
                   </p>
@@ -161,7 +161,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                     3
                   </div>
-                  <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Aplicar</h4>
+                  <h3 className="text-[var(--text-primary)] type-card-title mb-1.5">Aplicar</h3>
                   <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                     Executamos o plano com ferramentas práticas no dia a dia.
                   </p>
@@ -172,7 +172,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[var(--background-deep)] border-2 border-[var(--brand-cyan)] flex items-center justify-center text-[var(--brand-cyan)] font-bold text-lg mb-4 z-10">
                     4
                   </div>
-                  <h4 className="text-[var(--text-primary)] type-card-title mb-1.5">Acompanhar</h4>
+                  <h3 className="text-[var(--text-primary)] type-card-title mb-1.5">Acompanhar</h3>
                   <p className="text-[var(--text-secondary)] type-body-small max-w-[200px]">
                     Analisamos métricas, celebramos resultados e propomos ajustes.
                   </p>
