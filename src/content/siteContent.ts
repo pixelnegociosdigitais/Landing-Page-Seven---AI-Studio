@@ -32,8 +32,8 @@ export const siteContent = {
     whatsappLink: "https://wa.me/5554981112788",
     whatsappDisplay: "(54) 98111-2788",
     email: "contato@maisseven.com.br",
-    instagram: "@maisseven",
-    instagramLink: "https://instagram.com/maisseven",
+    instagram: "@maissevenorientacoes",
+    instagramLink: "https://www.instagram.com/maissevenorientacoes/",
     address: "Rio Grande do Sul, Brasil"
   },
   home: {
