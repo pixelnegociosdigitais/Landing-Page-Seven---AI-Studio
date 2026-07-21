@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
+import RouteMeta from './components/RouteMeta';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -42,6 +43,7 @@ function RouteFallback() {
 export default function App() {
   return (
     <Router>
+      <RouteMeta />
       <div className="flex flex-col min-h-screen bg-[#0D0F14] text-[#F7F8FA] antialiased selection:bg-[#16BDF0]/30 selection:text-white">
         
         {/* Skip to Content Link */}

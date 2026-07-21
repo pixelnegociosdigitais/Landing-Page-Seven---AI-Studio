@@ -405,7 +405,7 @@ export default function AboutPage() {
                       03
                     </div>
                     <div className="text-left">
-                      <h4 className="text-white text-sm font-medium mb-1">Formação e Implementation</h4>
+                      <h4 className="text-white text-sm font-medium mb-1">Formação e Implementação</h4>
                       <p className="text-[var(--gray-muted)] text-xs leading-relaxed">Realização das capacitações presenciais ou remotas das equipes, orientando e testando na prática cotidiana.</p>
                     </div>
                   </div>

@@ -301,7 +301,7 @@ export default function HomePage() {
                 </h2>
                 
                 <p className="text-[var(--text-secondary)] type-body mb-8 max-w-xl mx-auto relative z-10">
-                  Descubra caminhos consistentes com o apoio strategic da +Seven. Estamos prontos para entender seu momento e construir soluções personalizadas.
+                  Descubra caminhos consistentes com o apoio estratégico da +Seven. Estamos prontos para entender seu momento e construir soluções personalizadas.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
